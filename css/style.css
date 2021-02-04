@@ -98,8 +98,8 @@ h3{
   color: white;
   margin-top: 100px;
 }
-.header-bottom .col-lg-6{
-  /* border: 1px solid green; */
+.header-bottom .col-lg-10{
+  border: 1px solid green;
   height: 700px;
 }
 
@@ -114,7 +114,11 @@ h3{
   margin-top: 25px;
 }
 
-
+@media screen and (max-width: 767px) {
+  h1{
+    font-size: 35px;
+  }
+}
 
 /* Main */
 
@@ -194,7 +198,7 @@ h3{
 }
 .section-2 .container-1,
 .section-2 .container-3{
-  width: 30%;
+  width: 80%;
   margin: auto;
   /* height: 150px; */
   /* border: 1px solid green; */
@@ -321,6 +325,8 @@ h3{
   color: black;
   background-color: white;
 }
+
+
 
 /* Footer Bottom */
 .footer-bottom{
