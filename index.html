@@ -4,301 +4,177 @@
     <meta charset="utf-8">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS StyleSheet -->
     <link rel="stylesheet" href="css/style.css">
-    <title>Bootstrap Freelancer</title>
+    <title>Helbiz</title>
   </head>
   <body>
 
-    <header class="container-fluid">
-
-      <div class="header-top row">
-        <div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-6 font-600">
-          <a href="#"><h1>Start Bootstrap</h1></a>
-        </div>
-        <div class="col-lg-5 col-md-5 col-sm-6 text-center font-600">
-          <ul class="nav-orizzontale">
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <div class="hamburger-menu">
-            <a href="#">Menù <i class="fas fa-bars"></i></a>
-            <ul class="nav-verticale">
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="logo col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <img src="img/logo.svg" alt="">
+          </div>
+          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+            <nav class="primary-nav text-right">
+              <ul class="list-inline">
+                <li><a href="#">Mobility</a></li>
+                <li><a href="#">Helbiz Kitchen</a></li>
+                <li><a href="#">My Helbiz</a></li>
+                <li><a href="#">Unlimited</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <nav class="secondary-nav">
+              <ul class="list-inline">
+                <li class="lingua"><a href="#">Eng<i class="fas fa-chevron-down"></i></a></li>
+                <button class="btn">Login</button>
+              </ul>
+              <a class="menu text-right" href="#"><i class="fas fa-bars fa-2x"></i></a>
+            </nav>
           </div>
         </div>
       </div>
-
-      <div class="header-bottom row">
-
-        <div class="col-lg-offset-1 col-md-offset-1 col-lg-10 col-md-10 col-sm-12 text-center">
-
-          <img src="img/header.svg" alt="">
-          <h2>Start Bootstrap</h2>
-
-          <div class="container-divisore">
-
-            <div class="separatore-sinistra">
-              <hr class="bianco">
-            </div>
-
-            <div class="separatore-centro">
-              <i class="fas fa-star fa-3x"></i>
-            </div>
-
-            <div class="separatore-destra">
-              <hr class="bianco">
-            </div>
-
-          </div>
-
-          <p>Graphic Artist - Web Designer - Illustrator</p>
-
-        </div>
-
-      </div>
-
     </header>
 
     <main>
-
-      <section id="portfolio" class="section-1 container-fluid">
-
-        <div class="container-1 row text-center">
-
-          <h3>Portfolio</h3>
-
-          <div class="container-divisore">
-
-            <div class="separatore-sinistra">
-              <hr class="blu">
+      <section class="prima-sezione">
+        <div class="container hero">
+          <div class="row">
+            <div class="col-lg-12">
+              <h1 class="text-center">Mobility of Tomorrow</h1>
+              <img src="img/hero.jpg" alt="">
             </div>
-
-            <div class="separatore-centro">
-              <i class="fas fa-star fa-3x"></i>
-            </div>
-
-            <div class="separatore-destra">
-              <hr class="blu">
-            </div>
-
           </div>
-
         </div>
-
-        <div class="container-2 row text-center">
-
-          <div class="col-lg-4 col-md-6 col-sm-12">
-
-            <div class="contenitore">
-              <a href="#"><img src="img/foto-1.png" alt=""></a>
-              <div class="overlay">
-                <div class=""><i class="fas fa-plus fa-5x"></i></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-12">
-
-            <div class="contenitore">
-              <a href="#"><img src="img/foto-2.png" alt=""></a>
-              <div class="overlay">
-                <div class=""><i class="fas fa-plus fa-5x"></i></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-12">
-
-            <div class="contenitore">
-              <a href="#"><img src="img/foto-3.png" alt=""></a>
-              <div class="overlay">
-                <div class=""><i class="fas fa-plus fa-5x"></i></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-12">
-
-            <div class="contenitore">
-              <a href="#"><img src="img/foto-4.png" alt=""></a>
-              <div class="overlay">
-                <div class=""><i class="fas fa-plus fa-5x"></i></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-12">
-
-            <div class="contenitore">
-              <a href="#"><img src="img/foto-5.png" alt=""></a>
-              <div class="overlay">
-                <div class=""><i class="fas fa-plus fa-5x"></i></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-12">
-
-            <div class="contenitore">
-              <a href="#"><img src="img/foto-6.png" alt=""></a>
-              <div class="overlay">
-                <div class=""><i class="fas fa-plus fa-5x"></i></div>
-              </div>
-            </div>
-
-          </div>
-
-
-
-        </div>
-
       </section>
 
-      <section id="about" class="section-2 container-fluid">
-
-        <div class="container-1 row text-center">
-
-          <h3>About</h3>
-
-          <div class="container-divisore">
-
-            <div class="separatore-sinistra">
-              <hr class="bianco">
+      <section class="seconda-sezione">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <div class="container-grigio">
+                <h3><b>Helbiz</b> Go</h3>
+                <p>Seamless E-Scooter sharing globally.</p>
+                <a href="#">Learn more<i class="fas fa-chevron-right"></i></a>
+                <img src="img/helbizgo.png" alt="">
+              </div>
             </div>
-
-            <div class="separatore-centro">
-              <i class="fas fa-star fa-3x"></i>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <div class="container-grigio">
+                <h3><b>Helbiz</b> Bike</h3>
+                <p>Next generation of electric city bikes.</p>
+                <a href="#">Learn more<i class="fas fa-chevron-right"></i></a>
+                <img src="img/helbizbike.png" alt="">
+              </div>
             </div>
-
-            <div class="separatore-destra">
-              <hr class="bianco">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <div class="container-grigio">
+                <h3><b>Helbiz</b> Moped</h3>
+                <p>Electric moped sharing for those longer trips.</p>
+                <a href="#">Learn more<i class="fas fa-chevron-right"></i></a>
+                <img src="img/helbizmoped.png" alt="">
+              </div>
             </div>
-
           </div>
-
         </div>
-
-        <div class="container-2 row">
-
-          <div class="col-lg-offset-3 col-md-offset-2 col-lg-3 col-md-4 col-sm-12">
-            <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-12">
-            <p>You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p>
-          </div>
-
-        </div>
-
-        <div class="container-3 text-center">
-          <a class="bottone" href="#"><i class="fas fa-download fa-lg"></i>Free Download!</a>
-        </div>
-
       </section>
 
-      <section id="contact" class="section-3 container-fluid">
+      <section class="terza-sezione">
+        <div class="container container-sezione3">
+          <div class="row">
+            <div class="col-lg-4 col-md-3 prima-colonna">
+              <h3>How does Helbiz work?</h3>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 seconda-colonna text-center">
+              <img src="img/iphone.png" alt="">
+            </div>
 
-        <div class="container-1 row text-center">
+            <div class="col-sm-12 come-funziona-displaynone">
+              <h3>How does Helbiz work?</h3>
+            </div>
 
-          <div class="col-lg-offset-4 col-md-offset-4 col-sm-offset-1 col-lg-4 col-md-4 col-sm-10">
+            <div class="col-lg-4 col-md-3 cl-sm-12 terza-colonna">
+              <h5>Step 1</h5>
+              <p>Browse vehicles near you</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <h3>Contact Me</h3>
+      <section class="quarta-sezione">
+        <div class="container">
+          <div class="row container-grigio">
+            <div class="col-lg-6 col-md-6 prima-colonna">
+              <img src="img/carpisa.png" alt="">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <h5><b>Helbiz</b>|<b>Go</b>Carpisa</h5>
+              <h3>Get your personal Helbiz scooter today</h3>
+              <p>Lease your own fully connected private e-scooter for just €49.95 per month</p>
+              <a href="#">Learn more<i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="col-sm-12 col-xs-12 monopattino-displaynone text-center">
+              <img src="img/carpisa.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="container-divisore">
+      <section class="quinta-sezione">
+        <div class="container">
+          <div class="row text-center">
 
-              <div class="separatore-sinistra">
-                <hr class="blu">
-              </div>
-
-              <div class="separatore-centro">
-                <i class="fas fa-star fa-3x"></i>
-              </div>
-
-              <div class="separatore-destra">
-                <hr class="blu">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 colonna-monopattino">
+              <div class="container-monopattino">
+                <h3>Skip is now a part of Helbiz</h3>
+                <img src="img/scooter.png" alt="">
               </div>
 
             </div>
-
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 colonna-motorino">
+              <div class="container-motorino">
+                <h3>Mimoto is now a part of Helbiz</h3>
+                <img src="img/mimoto-moped.png" alt="">
+              </div>
+            </div>
           </div>
+          <div class="row">
+            <div class="col-lg-12">
 
-        </div>
-
-        <div class="container-2 row">
-
-          <div class="col-lg-offset-3 col-md-offset-2 col-lg-6 col-md-8 col-sm-12">
-
-            <form>
-
-              <input type="text" name="name" value="" placeholder="Name"><br>
-              <hr>
-              <input type="email" name="email" value="" placeholder="Email Address"><br>
-              <hr>
-              <input type="tel" name="number" value="" placeholder="Phone Number"><br>
-              <hr>
-              <textarea name="message" rows="8" cols="80" placeholder="Message"></textarea>
-              <hr>
-              <button type="button" class="btn btn-info">Send</button>
-
-            </form>
-
+            </div>
           </div>
-
+          <div class="row">
+            <div class="col-lg-6">
+              <h3>Get the App. Ride today.</h3>
+              <ul>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <img src="" alt="">
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <h3>Find us around the globe</h3>
+              <ul>
+                <li><a href="#"></a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-
       </section>
+
 
     </main>
 
-    <footer class="container-fluid">
-
-      <div class="footer-top row text-center">
-        <div class="container-footer">
-
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <h4>Location</h4>
-            <p>2215 John Daniel Drive<br>Clark, MO 65243</p>
-          </div>
-
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <h4>Around The Web</h4>
-            <ul>
-              <li><a href="#"><i class="fab fa-facebook-f fa-lg"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter fa-lg"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-lg"></i></a></li>
-              <li><a href="#"><i class="fab fa-dribbble fa-lg"></i></a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <h4>About Freelancer</h4>
-            <p>Freelancer is a free to use, MIT<br>licensed Bootstrap theme created by<br><span><a href="#">Start Bootstrap</a>.</span></p>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="footer-bottom row">
-        <div class="">
-
-          <div class="col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-lg-4 col-md-4 col-sm-4">
-            <p>Copyright © Your Website 2020</p>
-          </div>
-
-        </div>
-      </div>
+    <footer>
 
     </footer>
 
