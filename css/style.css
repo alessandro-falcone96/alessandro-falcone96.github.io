@@ -1,487 +1,164 @@
 body{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 [class*="col-"] {
   /* border: 1px solid black; */
-  /* height: 300px; */
 }
 
-/* General */
-.container-grigio{
-  background-color: #FAFAFA;
-}
 
 /* Header */
 header{
+  background-color: white;
   position: fixed;
   width: 100%;
   z-index: 1;
-  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
 }
-header .logo img{
-  height: 15px;
+header ul{
+  height: 35px;
 }
-header .row{
-  line-height: 50px;
-  /* background-color: lightyellow; */
-}
-header nav ul li a{
-  text-transform: uppercase;
+header ul li a{
   color: black;
-  font-size: 12px;
-}
-header .primary-nav li a{
-  margin: 0px 15px;
-}
-header .secondary-nav button{
-  margin-left: 15px;
-  border-radius: 0px;
-  background-color: black;
-  color: white;
-  padding: 5px 15px;
+  line-height: 45px;
 }
 header ul li i{
   margin-left: 5px;
 }
-header ul li.lingua{
-  border-right: 1px solid black;
-  border-left: 1px solid black;
+header ul li a.btn{
   line-height: normal;
+  background-color: white;
+  color: #016AFF;
+  border: 1px solid #016AFF;
+
 }
-header .secondary-nav .menu{
-  display: none;
+header img{
+  height: 25px;
+  margin: 10px 0px;
+}
+header .menu{
+  height: 45px;
+}
+header .menu i{
+  line-height: 45px;
 }
 
 
 /* Main */
+main{
+  height: 300vh;
+}
 
 /* Prima Sezione */
-.prima-sezione .col-lg-12{
-  margin-top: 100px;
-}
-.prima-sezione h1{
-  font-size: 100px;
-  font-weight: bold;
-  color: black;
-  margin: 75px 0px;
-}
-.prima-sezione img{
-  width: 100%;
-}
-
-/* Seconda Sezione */
-.seconda-sezione h3{
-  text-transform: uppercase;
-  font-size: 35px;
-  letter-spacing: 5px;
-  padding: 50px 0px 15px 0px;
-}
-.seconda-sezione p{
-  font-size: 20px;
-  padding: 10px 15px 35px 15px;
-}
-.seconda-sezione a{
-  color: #0070C8;
-  font-size: 20px;
-}
-.seconda-sezione i{
-  margin-left: 5px;
-}
-.seconda-sezione .container-grigio{
-  height: 675px;
-  position: relative;
-}
-.seconda-sezione img{
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 30px;
-}
-
-/* Terza Sezione */
-.terza-sezione{
-  height: 600px;
-  background-color: yellow;
-  background-image: url("../img/banner.jpg");
-  background-size: cover;
-  background-position: 20% center;
-  margin-top: 50px;
-}
-.terza-sezione .container-sezione3{
-  width: 80%;
-  margin: auto;
-}
-
-.terza-sezione img{
-  width: 280px;
-}
-.terza-sezione h3{
-  font-size: 40px;
-  font-weight: bold;
-}
-.terza-sezione h5{
-  font-size: 20px;
-  font-weight: 600;
-}
-.terza-sezione p{
-  font-size: 20px;
-}
-.terza-sezione .prima-colonna,
-.terza-sezione .terza-colonna {
-  margin-top: 650px;
-}
-.terza-sezione .seconda-colonna{
-  margin-top: 250px;
-}
-.terza-sezione .seconda-colonna img{
-  /* background-color: white; */
-}
-.terza-sezione .come-funziona-displaynone{
-  display: none;
-}
-
-/* Quarta Sezione */
-.quarta-sezione{
-  margin-top: 300px;
-}
-.quarta-sezione h5{
-  font-size: 30px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  margin: 45px 15px;
-}
-.quarta-sezione h3{
-  font-size: 45px;
-  font-weight: bolder;
-  margin-left: 15px;
-}
-.quarta-sezione p{
-  width: 85%;
-  font-size: 25px;
-  margin: 45px 15px;
-}
-.quarta-sezione a{
-  text-decoration: none;
-  color: black;
-  margin-left: 15px;
-  font-size: 20px;
-}
-.quarta-sezione i{
-  margin-left: 5px;
-}
-.quarta-sezione .monopattino-displaynone{
-  display: none
-}
-
-/* Quinta Sezione */
-.quinta-sezione{
-  margin-top: 100px;
-}
-.quinta-sezione h3{
-  font-size: 50px;
-  color: white;
-  width: 85%;
-  margin: auto;
-  font-weight: bolder;
-  padding-top: 50px;
-}
-.quinta-sezione img{
-  width: 100%;
-  object-fit: contain;
-  position: absolute;
-  left: 0;
-  bottom: 30px;
-}
-.quinta-sezione .container-monopattino,
-.quinta-sezione .container-motorino{
-  width: 95%;
-  margin: auto;
-  min-height: 600px;
-  position: relative;
-}
-.quinta-sezione .container-monopattino{
-  background-color: #48BEE9;
-}
-.quinta-sezione .container-motorino{
-  background-color: #FFD30D;
-}
-
-.quinta-sezione .seconda-riga{
-  margin-top: 50px;
-  background-image: url("../img/scooter-banner.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-  color: white;
-  position: relative;
-}
-.quinta-sezione .seconda-riga .contenuto{
-  position: absolute;
-  top: 100px;
-  right: 10px;
-  /* border: 1px solid white; */
-  width: 50%;
-}
-.quinta-sezione .seconda-riga .contenuto h2{
-  font-size: 50px;
-  font-weight: bolder;
-  padding: 0px 15px;
-}
-.quinta-sezione .seconda-riga .contenuto p{
-  font-size: 30px;
-  margin: 30px 0px;
-}
-.quinta-sezione .seconda-riga .contenuto a{
-  text-decoration: none;
-  color: white;
-  margin-left: 15px;
-  font-size: 20px;
-}
-
-.quinta-sezione .terza-riga{
-  margin-top: 50px;
-}
-.quinta-sezione .container-iphone,
-.quinta-sezione .container-citta{
-  width: 95%;
-  margin: auto;
-  min-height: 800px;
-  position: relative;
-}
-.quinta-sezione .container-iphone img{
-  width: 75%;
-  object-fit: contain;
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  transform: translate(-50%);
-}
-.quinta-sezione .container-iphone{
-  background-image: linear-gradient(#7C91AB, #252F38);
-}
-.quinta-sezione .container-citta{
-  width: 100%;
-  background-image: url("../img/city.jpg");
+.prima-sezione{
+  height: 100vh;
+  background-image: url("../img/sfondo-header.svg");
   background-size: cover;
   background-position: center;
 }
-.quinta-sezione .terza-riga h3{
-  width: 80%;
+.prima-sezione .container{
+  position: relative;
 }
-.quinta-sezione .terza-riga ul li{
+.prima-sezione .contenuto{
+  position: absolute;
+  top: 250px;
+  left: 0px;
+}
+.prima-sezione .contenuto h1{
+  color: white;
+  font-size: 50px;
+  font-weight: bolder;
+  width: 85%;
+  margin-left: 25px;
   margin-top: 30px;
 }
-.quinta-sezione .terza-riga ul li a{
-  color: white;
+.prima-sezione .contenuto p{
+  color: lightgrey;
+  font-size: 20px;
+  line-height: 25px;
+  width: 85%;
+  margin-left: 25px;
+}
+.prima-sezione .contenitore-finestra-login{
+  position: absolute;
+  top: 250px;
+  right: 0px;
+}
+
+.prima-sezione .finestra-login {
+  background-color: white;
+  height: 300px;
+  width: 100%;
+  border-radius: 5px;
+}
+.prima-sezione .finestra-login h3{
   font-size: 30px;
+  width: 90%;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  line-height: 40px;
 }
-.quinta-sezione .terza-riga ul li i{
-  margin-left: 10px;
+.prima-sezione .finestra-login h3 span{
+  color: #016AFF;
 }
+.prima-sezione .finestra-login input{
+  width: 90%;
+  margin: 5px 0px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 5px;
+}
+.prima-sezione .finestra-login input.crea-account{
+  color: white;
+  background-color: #016AFF;
+  border: 1px solid #016AFF;
+}
+.prima-sezione .finestra-login input.login-google{
+  color: black;
+  background-color: white;
+  box-shadow: 1px 1px lightgrey;
+}
+
 
 /* Footer */
-footer{
-  background-color: black;
-  color: white;
-  margin-top: 50px;
-}
-footer img{
-  height: 20px;
-}
 
-footer h3{
-  font-size: 50px;
-  font-weight: bolder;
-  width: 75%;
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-footer img, footer .first{
-  margin-top: 50px;
-  font-size: 20px;
-}
-footer ul li.first{
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-footer ul li{
-  list-style: none;
-  padding: 5px 0px;
-}
-footer ul li a{
-  color: white;
-  text-decoration: none;
-}
-footer .seconda-riga{
-  height: 50px;
-  line-height: 50px;
-  margin-bottom: 100px;
-}
-footer .seconda-riga img{
-  margin-top: 0;
-  border: 2px solid white;
-  border-radius: 5px;
-  height: 45px;
-  background-color: black;
-}
-
-/* Media Query */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  header .secondary-nav button{
-    margin-left: 10px;
+  .prima-sezione .finestra-login{
+    height: 375px;
   }
-
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  header .primary-nav,
-  header .secondary-nav .list-inline{
-    display: none;
+  .prima-sezione .contenuto{
+    position: absolute;
+    top: 75px;
+    left: 0px;
   }
-  header .secondary-nav .menu{
-    display: block;
+  .prima-sezione .contenitore-finestra-login{
+    position: absolute;
+    top: 450px;
+    right: 0px;
   }
-
-  .prima-sezione h1{
-    font-size: 60px;
-  }
-
-  .seconda-sezione img{
+  .prima-sezione .finestra-login h3{
     width: 55%;
-    left: 150px;
-  }
-  .terza-sezione h3{
-    font-size: 30px;
-  }
-  .terza-sezione .prima-colonna{
-   display: none;
- }
- .terza-sezione .come-funziona-displaynone{
-   display: block;
- }
- .quarta-sezione{
-   margin-top: 400px;
-  }
-  .quarta-sezione .prima-colonna{
-    display: none;
-  }
-  .quarta-sezione .monopattino-displaynone{
-    display: block;
-  }
-
-  .quinta-sezione .seconda-riga .contenuto{
-    top: 100px;
-  }
-  .quinta-sezione .seconda-riga .contenuto h2{
-    font-size: 35px;
-  }
-  .quinta-sezione .seconda-riga .contenuto p{
-    font-size: 20px;
-  }
-
-  .quinta-sezione .container-iphone,
-  .quinta-sezione .container-citta{
-    min-height: 600px;
-  }
-  .quinta-sezione .terza-riga h3{
-    font-size: 35px;
-  }
-  .quinta-sezione .terza-riga a{
-    font-size: 20px;
-  }
-
-  footer h3{
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  footer ul.footer-nav{
-    min-height: 300px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  header .primary-nav,
-  header .secondary-nav .list-inline{
-    display: none;
+  .prima-sezione .contenuto{
+    position: absolute;
+    top: 75px;
+    left: 0px;
   }
-  header .secondary-nav .menu{
-    display: block;
+  .prima-sezione .contenitore-finestra-login{
+    position: absolute;
+    top: 450px;
+    right: 0px;
   }
-
-  .seconda-sezione img{
+  .prima-sezione .finestra-login h3{
     width: 55%;
-    left: 150px;
-  }
-  .terza-sezione .prima-colonna{
-   display: none;
- }
- .terza-sezione .come-funziona-displaynone{
-   display: block;
- }
- .terza-sezione .terza-colonna{
-   margin-top: 0;
- }
- .quarta-sezione{
-   margin-top: 400px;
- }
-  .quarta-sezione .prima-colonna{
-    display: none;
-  }
-  .quarta-sezione .monopattino-displaynone{
-    display: block;
-  }
-
-  .quinta-sezione .container-monopattino,
-  .quinta-sezione .container-motorino{
-    min-height: 750px;
-    margin: 30px 0px;
-  }
-
-  .quinta-sezione .seconda-riga {
-    background-position: right;
-  }
-  .quinta-sezione .seconda-riga .contenuto h2{
-    font-size: 35px;
-  }
-  .quinta-sezione .seconda-riga .contenuto p{
-    font-size: 20px;
-  }
-  .quinta-sezione .seconda-riga .contenuto{
-    top: 100px;
-    right: 175px;
-  }
-  .quinta-sezione .seconda-riga .contenuto h2{
-    font-size: 35px;
-  }
-  .quinta-sezione .seconda-riga .contenuto p{
-    font-size: 20px;
-  }
-
-  .quinta-sezione .container-iphone,
-  .quinta-sezione .container-citta{
-    min-height: 700px;
-  }
-  .quinta-sezione .container-iphone img{
-    width: 50%;
-  }
-  .quinta-sezione .terza-riga h3{
-    font-size: 35px;
-    width: 40%;
-  }
-  .quinta-sezione .terza-riga a{
-    font-size: 20px;
-  }
-  .quinta-sezione .container-citta{
-    margin-top: 50px;
-    width: 95%;
-  }
-
-  footer h3{
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  footer ul.footer-nav{
-    min-height: 300px;
   }
 }
