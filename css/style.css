@@ -72,15 +72,33 @@ aside .container-sopra h3{
   text-transform: uppercase;
   font-size: 15px;
 }
-aside .container-sopra .crea-playlist{
-  display: flex;
+aside .container-sopra .playlist{
   padding: 5px 0px 10px 15px;
   color: grey;
+  /* background-color: orange; */
 }
-aside .container-sopra .crea-playlist h4{
+aside .container-sopra .playlist .crea-playlist{
+  display: flex;
+  margin-bottom: 5px;
+}
+aside .container-sopra .playlist .brani-preferiti{
+  display: flex;
+  margin-top: 5px;
+}
+aside .container-sopra .playlist img{
+  height: 28px;
+  width: 28px;
+  border-radius: 3px;
+}
+aside .container-sopra .playlist h4{
   align-self: center;
   padding-left: 10px;
 }
+/* aside .container-sopra ul:last-child{
+  height: 250px;
+  overflow: auto;
+  background-color: green;
+} */
 
 aside .container-sopra ul li i.fa-slash{
   /* color: orange; */
