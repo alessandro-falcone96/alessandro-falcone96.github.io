@@ -23,6 +23,7 @@ main{
   background-color: orange;
   margin-left: 20%;
   margin-top: 7vh;
+  overflow: auto;
 }
 
 aside{
@@ -148,6 +149,7 @@ header{
 
 header .sinistra{
   margin-left: 10px;
+  flex-shrink: 0;
 }
 header .sinistra i{
   margin: 0px 5px;
@@ -180,7 +182,6 @@ header .destra .user{
   align-items: center;
   background-color: black;
   border-radius: 25px;
-  padding: 8px 5px;
   margin-left: 10px;
 }
 header .destra .user a{
@@ -193,3 +194,136 @@ header .destra .user i{
 header .destra .user i:last-child{
   margin-right: 10px;
 }
+
+
+/* Main */
+
+
+main nav{
+  background-color: #131313;
+  height: 50px;
+}
+main nav ul{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  line-height: 50px;
+}
+main nav ul li{
+  padding: 0px 10px;
+}
+main nav ul li a{
+  text-decoration: none;
+  color: lightgrey;
+  text-transform: uppercase;
+}
+
+
+
+
+main .recently{
+  background-color: #131313;
+}
+main .recently h2{
+  color: white;
+  padding: 20px;
+}
+main .recently .contenitore-album{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+main .recently .contenitore-album .album{
+  width: 150px;
+  text-align: center;
+  margin: 0px 20px;
+}
+main .recently .contenitore-album .album img{
+  height: 150px;
+  width: 150px;
+}
+main .recently .contenitore-album .album h4{
+  color: white;
+  margin: 15px 0px;
+}
+main .recently .contenitore-album .album h6{
+  color: lightgrey;
+  margin: 15px 0px;
+}
+
+
+
+
+main .creato-per{
+  background-color: #131313;
+}
+main .creato-per h2{
+  color: white;
+  padding: 20px 0px 5px 20px;
+}
+main .creato-per h6{
+  color: lightgrey;
+  padding: 5px 0px 20px 20px;
+}
+main .creato-per .contenitore-album{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+main .creato-per .contenitore-album .album{
+  width: 150px;
+  text-align: center;
+  margin: 0px 20px;
+}
+main .creato-per .contenitore-album .album img{
+  height: 150px;
+  width: 150px;
+}
+main .creato-per .contenitore-album .album h4{
+  color: white;
+  margin: 15px 0px;
+}
+
+
+
+
+main .artisti-popolari{
+  background-color: #131313;
+}
+main .artisti-popolari h2{
+  color: white;
+  padding: 20px 0px 5px 20px;
+}
+main .artisti-popolari h6{
+  color: lightgrey;
+  padding: 5px 0px 20px 20px;
+}
+main .artisti-popolari .contenitore-album{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+main .artisti-popolari .contenitore-album .album{
+  width: 150px;
+  text-align: center;
+  margin: 0px 20px;
+}
+main .artisti-popolari .contenitore-album .album img{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+main .artisti-popolari .contenitore-album .album h4{
+  color: white;
+  margin: 15px 0px;
+}
+
+
+
+
+
+
+
+/* 1100px-700px
+  700px-600px
+  <600px*/
