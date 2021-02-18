@@ -10,8 +10,8 @@ body{
 /* Grandezze 4 macroaree */
 header{
   width: 80%;
-  height: 10vh;
-  background-color: blue;
+  height: 7vh;
+  background-color: #1B0721;
   margin-left: 20%;
   position: fixed;
   top: 0;
@@ -19,10 +19,10 @@ header{
 }
 main{
   width: 80%;
-  height: 80vh;
+  height: 84vh;
   background-color: orange;
   margin-left: 20%;
-  margin-top: 10vh;
+  margin-top: 7vh;
 }
 
 aside{
@@ -134,4 +134,62 @@ aside .container-sotto .user-john h5{
   align-self: center;
   padding-left: 10px;
   margin-bottom: 10px;
+}
+
+
+
+
+/* Header */
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .sinistra{
+  margin-left: 10px;
+}
+header .sinistra i{
+  margin: 0px 5px;
+}
+
+header .destra{
+  display: flex;
+  margin-right: 10px;
+}
+header .destra .upgrade{
+  background-color: yellow;
+  border-radius: 25px;
+  background-color: black;
+  border: 1px solid white;
+  display: flex;
+}
+header .destra a{
+  color: white;
+  text-decoration: none;
+}
+header .destra .upgrade a{
+  padding: 8px 35px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-right: 10px;
+  align-self: center;
+}
+header .destra .user{
+  display: flex;
+  align-items: center;
+  background-color: black;
+  border-radius: 25px;
+  padding: 8px 5px;
+  margin-left: 10px;
+}
+header .destra .user a{
+  letter-spacing: 1px;
+  padding: 0px 5px;
+}
+header .destra .user i{
+  color: white;
+}
+header .destra .user i:last-child{
+  margin-right: 10px;
 }
