@@ -1,12 +1,1 @@
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
- <g>
-  <title>background</title>
-  <rect x="-1" y="-1" width="802" height="602" id="canvas_background" fill="none"/>
- </g>
-
- <g>
-  <title>Layer 1</title>
-  <ellipse stroke="#000" stroke-width="21" ry="118.55555" rx="122.43154" id="svg_13" cy="285.4777" cx="341.15001" opacity="undefined" stroke-opacity="null" stroke-dasharray="null" fill="none"/>
-  <line stroke="#000" stroke-linecap="null" stroke-linejoin="null" id="svg_15" y2="446.19439" x2="513.10144" y1="363.3774" x1="422.68088" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="21" fill="none"/>
- </g>
-</svg>
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z" fill="#ffffff" fill-rule="evenodd"/></svg>

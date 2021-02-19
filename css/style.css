@@ -5,31 +5,32 @@
 }
 body{
   width: 100%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Grandezze 4 macroaree */
 header{
-  width: 80%;
-  height: 7vh;
+  width: calc(100% - 275px);
+  height: 8vh;
   background-color: #1B0721;
-  margin-left: 20%;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 275px;
 }
 main{
-  width: 80%;
-  height: 84vh;
-  background-color: orange;
-  margin-left: 20%;
-  margin-top: 7vh;
+  width: calc(100% - 275px);
+  height: 82vh;
+  /* background-color: orange; */
+  margin-left: 275px;
+  margin-top: 8vh;
   overflow: auto;
+  flex-shrink: 1;
 }
 
 aside{
   height: 90vh;
   width: 20%;
-  min-width: 275px;
+  /* min-width: 275px; */
   background-color: black;
   position: fixed;
   top: 0;
@@ -47,6 +48,7 @@ footer{
 /* Aside */
 aside{
   color: white;
+  width: 275px;
 }
 aside .container-sopra{
   width: 80%;
@@ -106,6 +108,12 @@ aside .container-sopra ul li i.fa-slash{
   transform: rotate(40deg);
   margin-left: -5px;
 }
+
+aside .container-sopra ul:last-child{
+  overflow: auto;
+}
+
+
 
 aside .container-sotto{
   width: 85%;
@@ -201,13 +209,15 @@ header .destra .user i:last-child{
 
 main nav{
   background-color: #131313;
-  height: 50px;
+  /* height: 50px; */
 }
 main nav ul{
   display: flex;
   list-style: none;
   justify-content: center;
-  line-height: 50px;
+  /* line-height: 50px; */
+  align-items: center;
+  padding-top: 20px;
 }
 main nav ul li{
   padding: 0px 10px;
@@ -223,6 +233,8 @@ main nav ul li a{
 
 main .recently{
   background-color: #131313;
+  overflow: auto;
+  overflow-y: hidden;
 }
 main .recently h2{
   color: white;
@@ -231,7 +243,7 @@ main .recently h2{
 main .recently .contenitore-album{
   display: flex;
   justify-content: flex-start;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 main .recently .contenitore-album .album{
   width: 150px;
@@ -318,8 +330,118 @@ main .artisti-popolari .contenitore-album .album h4{
   margin: 15px 0px;
 }
 
+/* Footer */
+footer{
+  display: flex;
+}
+footer .contenitore-sinistra{
+  background-color: #191919;
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+footer .contenitore-sinistra img{
+  height: 50px;
+  width: 50px;
+  margin: 0px 10px;
+}
+footer .contenitore-sinistra .canzone-riprodotta{
+  margin-right: 30px;
+}
+footer .contenitore-sinistra h5{
+  color: white;
+}
+footer .contenitore-sinistra h6{
+  color: grey;
+}
+footer .contenitore-sinistra i{
+  color: grey;
+  padding: 0px 5px;
+}
 
+footer .contenitore-centro{
+  background-color: #191919;
+  width: 50%;
+}
+footer .contenitore-centro .contenitore-alto{
+  background-color: #191919;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .contenitore-centro .contenitore-alto i{
+  padding: 0px 10px;
+  color: white;
+}
+footer .contenitore-centro .contenitore-basso{
+  background-color: #191919;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+footer .contenitore-centro .contenitore-basso p{
+  color: white;
+}
+footer .contenitore-centro .contenitore-basso hr{
+  height: 5px;
+  width: 80%;
+  color: grey;
+  background-color: grey;
+  border: 1px solid grey;
+  position: relative;
+  border-radius: 15px;
+}
 
+footer .contenitore-centro .contenitore-basso hr:before{
+    background-color: lightgrey;
+    border: 1px solid lightgrey;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    content: '';
+    display: block;
+    height: 8px;
+    left: 0;
+    position: absolute;
+    top: -2px;
+    width: 20%;
+    z-index: 1;
+}
+
+footer .contenitore-destra{
+  background-color: #191919;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+footer .contenitore-destra i{
+  color: lightgrey;
+}
+footer .contenitore-destra hr{
+  height: 5px;
+  width: 50%;
+  color: grey;
+  background-color: grey;
+  border: 1px solid grey;
+  position: relative;
+  border-radius: 15px;
+}
+footer .contenitore-destra hr:before{
+    background-color: lightgrey;
+    border: 1px solid lightgrey;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    content: '';
+    display: block;
+    height: 8px;
+    left: 0;
+    position: absolute;
+    top: -2px;
+    width: 20%;
+    z-index: 1;
+}
 
 
 
