@@ -30,7 +30,7 @@ main{
 }
 
 aside{
-  height: calc(100% - 100px);
+  height: calc(100vh - 100px);
   /* min-width: 275px; */
   background-color: black;
   position: fixed;
@@ -46,134 +46,135 @@ footer{
   background-color: purple;
 }
 
+
 /* Aside */
 aside{
   color: white;
   width: 275px;
   position: absolute;
 }
-aside .container-sopra{
-  width: 80%;
-  margin: auto;
-  /* background-color: lightgreen; */
-  margin-top: 15px;
-}
-aside .container-sopra .logo{
+.flex{
   display: flex;
+}
+aside ul li{
+  list-style: none;
+}
+aside > *{
+  width: 90%;
+  margin: auto;
+}
+aside .playlist h4,
+aside .installa h6,
+aside .user-me h5{
+  align-self: center;
+}
+
+aside .logo{
+  height: 75px;
+  align-items: center;
   padding: 10px 0px 5px 15px;
 }
-aside .container-sopra .logo h1{
-  align-self: center;
+aside .logo h1{
   font-size: 30px;
   padding-left: 10px;
 }
-aside .container-sopra ul li{
-  list-style: none;
-  color: grey;
+
+aside .nav-principale{
+  height: 125px;
 }
-aside .container-sopra ul.nav-principale li{
+aside ul.nav-principale li{
   margin: 15px 0px;
   padding: 0px 15px;
+  color: grey;
 }
-
-aside .container-sopra ul.nav-principale li:hover{
+aside ul.nav-principale li:hover{
   color: white;
   border-left: 2px solid green;
 }
 
-aside .container-sopra h3{
-  padding: 10px 0px 5px 15px;
-  text-transform: uppercase;
-  font-size: 15px;
+aside .playlist{
+  height: 125px;
 }
-aside .container-sopra .playlist{
+aside .playlist{
   padding: 5px 0px 10px 15px;
   color: grey;
   border-bottom: 1px solid grey;
   /* background-color: orange; */
 }
-aside .container-sopra .playlist .crea-playlist{
+aside .playlist h3{
+  padding: 10px 0px 5px 0px;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: white;
+}
+aside .playlist .crea-playlist{
   display: flex;
   margin-bottom: 5px;
 }
-aside .container-sopra .playlist .brani-preferiti{
+aside .playlist .brani-preferiti{
   display: flex;
   margin-top: 5px;
 }
-aside .container-sopra .playlist img{
+aside .playlist img{
   height: 28px;
   width: 28px;
   border-radius: 3px;
 }
-aside .container-sopra .playlist h4{
+aside .playlist h4{
   align-self: center;
   padding-left: 10px;
 }
-aside .container-sopra .playlist h4:hover,
-aside .container-sopra ul.lista-playlist li:hover,
-aside .container-sotto .installa:hover{
+aside .playlist h4:hover,
+aside ul.lista-playlist li:hover{
   color: white;
 }
-aside .container-sopra ul.lista-playlist{
-  height: 300px;
-  overflow: auto;
-  margin-top: 10px;
-  /* overflow-y: auto; */
+
+aside .lista-playlist{
+  height: calc(100% - 415px);
 }
-aside .container-sopra ul.lista-playlist li{
+aside ul.lista-playlist{
+  overflow: auto;
+}
+aside ul.lista-playlist li{
   margin: 10px 0px 10px 15px;
   font-size: 15px;
-}
-
-aside .container-sopra ul li i.fa-slash{
-  /* color: orange; */
-  transform: rotate(40deg);
-  margin-left: -5px;
-}
-
-
-aside .container-sopra{
-  border: 1px solid green;
-}
-
-aside .container-sotto{
-  width: 85%;
-  margin: 0px 15% 0px 10%;
-  /* background-color: blue; */
-  /* position: absolute;
-  bottom: 0; */
-  /* height: 61px; */
-  border: 1px solid blue;
-}
-
-aside .container-sotto .installa{
-  display: flex;
-  margin-bottom: 10px;
   color: grey;
 }
-aside .container-sotto .installa h6{
-  align-self: center;
+
+aside .utente{
+  height: 90px;
+}
+aside .installa{
+  display: flex;
+  padding: 10px;
+  color: grey;
+  border-bottom: 1px solid grey;
+}
+aside .installa h6{
   padding-left: 10px;
 }
-aside .container-sotto .user-me{
-  display: flex;
-  margin-top: 10px;
+aside .installa:hover{
+  color: white;
 }
-aside .container-sotto .user-me img{
+aside .user-me{
+  display: flex;
+  padding-top: 10px;
+}
+aside .user-me img{
   height: 30px;
   width: 30px;
+  margin-left: 10px;
   border-radius: 50%;
 }
-aside .container-sotto .user-me h5{
+aside .user-me h5{
   align-self: center;
   padding-left: 10px;
 }
 
-aside .container-sotto hr{
+aside hr{
   height: 1px;
   color: grey;
   background-color: grey;
-  border: 1px solid grey;
 }
 
 aside .contenuto-nascosto{
@@ -190,10 +191,7 @@ aside .contenuto-nascosto i:first-child{
 aside .contenuto-nascosto i:not(i.fa-spotify){
   color: grey;
 }
-/* aside .contenuto-nascosto li:hover{
-  color: white;
-  border-left: 2px solid green;
-} */
+
 aside .contenuto-nascosto img{
   height: 50px;
   width: 50px;
@@ -205,7 +203,6 @@ aside .contenuto-nascosto ul:last-child{
   left: 50%;
   transform: translate(-50%);
 }
-
 
 /* Header */
 header{
@@ -275,8 +272,6 @@ header .destra .user i:last-child{
 
 
 /* Main */
-
-
 main nav{
   background-color: #131313;
   /* height: 50px; */
@@ -303,29 +298,26 @@ main nav ul li a:hover{
   /* border-bottom: 2px solid green; */
 }
 
-main nav ul li a:hover + .bordo-fisso-centrale:after{
-  opacity: 1;
-}
-.bordo-fisso-centrale {
+nav li {
 	position: relative;
 }
-.bordo-fisso-centrale:before,
-.bordo-fisso-centrale:after {
+nav li:before,
+nav li:after {
     content: '';
     display: block;
     position: absolute;
 }
-.bordo-fisso-centrale:after {
+nav li:after {
   width: 40px;
   left: 50%;
   transform: translate(-50%);
   border-bottom: 2px solid green;
   border-right: 2px solid green;
-  /* opacity: 0; */
+  opacity: 0;
 }
-/* main nav ul li a:hover + a.bordo-fisso-centrale::after{
+main nav ul li:hover::after{
   opacity: 1;
-} */
+}
 
 
 main .recently{
@@ -774,8 +766,7 @@ footer .contenitore-destra hr:hover:before{
     width: 60%;
   }
 
-  aside .container-sopra,
-  aside .container-sotto{
+  aside > *:not(div:last-child){
     display: none;
   }
   aside .contenuto-nascosto{
@@ -789,8 +780,3 @@ footer .contenitore-destra hr:hover:before{
     border-left: 2px solid green;
   }
 }
-
-
-/* 1100px-700px
-  700px-600px
-  <600px*/
