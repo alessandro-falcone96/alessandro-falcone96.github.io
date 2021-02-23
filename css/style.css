@@ -60,7 +60,31 @@ footer{
 .contenitore-album .album img{
   width: 100%;
 }
-main *{
+.p20{
+  padding: 20px;
+}
+.m15-0{
+  margin: 15px 0px;
+}
+.p5-0-20-20{
+  padding: 5px 0px 20px 20px;
+}
+.p20-0-5-20{
+  padding: 20px 0px 5px 20px;
+}
+.p20-0-20-20{
+  padding: 20px 0px 20px 20px;
+}
+.white{
+  color: white;
+}
+.lightgrey{
+  color: lightgrey;
+}
+
+
+main > div,
+main > nav{
   background-color: #131313;
 }
 
@@ -331,7 +355,6 @@ main nav ul li a{
 }
 main nav ul li a:hover{
   color: white;
-  /* border-bottom: 2px solid green; */
 }
 
 main nav li a{
@@ -355,89 +378,9 @@ main nav ul li a:hover::after{
   opacity: 1;
 }
 
-
-
-main .recently h2{
-  color: white;
-  padding: 20px;
-}
-
-main .recently .contenitore-album .album h4{
-  color: white;
-  margin: 15px 0px;
-}
-main .recently .contenitore-album .album h6{
-  color: lightgrey;
-  margin: 15px 0px;
-}
-
-
-
-main .creato-per{
-  background-color: #131313;
-}
-main .creato-per h2{
-  color: white;
-  padding: 20px 0px 5px 20px;
-}
-main .creato-per h6{
-  color: lightgrey;
-  padding: 5px 0px 20px 20px;
-}
-main .creato-per .contenitore-album .album h4{
-  color: white;
-  margin: 15px 0px;
-}
-
-
-main .tue-playlist h2{
-  color: white;
-  padding: 20px 0px 20px 20px;
-}
-main .tue-playlist h6{
-  color: lightgrey;
-  padding: 5px 0px 20px 20px;
-}
-
-main .tue-playlist .contenitore-album .album h4{
-  color: white;
-  margin: 15px 0px;
-}
-
-
-main .unicamente h2{
-  color: white;
-  padding: 20px 0px 20px 20px;
-}
-main .unicamente h6{
-  color: lightgrey;
-  padding: 5px 0px 20px 20px;
-}
-
-main .unicamente .contenitore-album .album h4{
-  color: white;
-  margin: 15px 0px;
-}
-
-
-
-main .artisti-popolari h2{
-  color: white;
-  padding: 20px 0px 5px 20px;
-}
-main .artisti-popolari h6{
-  color: lightgrey;
-  padding: 5px 0px 20px 20px;
-}
-
 main .artisti-popolari .contenitore-album .album img{
   border-radius: 50%;
 }
-main .artisti-popolari .contenitore-album .album h4{
-  color: white;
-  margin: 15px 0px;
-}
-
 
 /* Footer */
 footer{
