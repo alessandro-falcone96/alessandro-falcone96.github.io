@@ -288,7 +288,7 @@ header .sinistra i:hover{
 
 header .destra{
   display: flex;
-  margin-right: 10px;
+  margin-right: 30px;
 }
 header .destra .upgrade{
   background-color: yellow;
@@ -313,10 +313,12 @@ header .destra .user{
   align-items: center;
   background-color: black;
   border-radius: 25px;
-  margin-left: 10px;
+  margin-left: 30px;
 }
+header .destra .upgrade:hover,
 header .destra .user:hover{
   background-color: #131313;
+  transform: scale(1.2);
 }
 header .destra .user img{
   height: 30px;
@@ -406,6 +408,10 @@ footer .contenitore-sinistra h5{
 }
 footer .contenitore-sinistra h6{
   color: grey;
+}
+footer .contenitore-sinistra h6:hover{
+  color: white;
+  text-decoration: underline;
 }
 footer .contenitore-sinistra i{
   color: grey;
