@@ -186,19 +186,93 @@ main > nav{
   opacity: 1;
 }
 
-/* Prova Animazione*/
-.contenitore-album .album:hover img{
-  animation-name: rotation;
+/* Animazione 1*/
+.recently .contenitore-album .album:hover img{
+  animation-name: animazione-1;
   animation-timing-function: linear;
   animation-duration: 1s;
   animation-iteration-count: 1;
 }
-@keyframes rotation{
+@keyframes animazione-1{
   100% {transform: rotate(360deg);}
 }
+/* Animazione 1 Fine */
 
-/* Prova Animazione Fine */
+/* Animazione 2*/
+.creato-per .contenitore-album .album:hover img{
+  animation-name: animazione-2;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+@keyframes animazione-2{
+  50% {
+    transform: scale(1.3);
+    border-radius: 50%;
+  }
+  100% {
+    transform: scale(1);
+    border-radius: 0%;
+  }
+}
+/* Animazione 2 Fine */
 
+/* Animazione 3*/
+.tue-playlist .contenitore-album .album:hover img{
+  animation-name: animazione-3;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+@keyframes animazione-3{
+  50% {
+    transform: scale(0.7);
+    border-radius: 50%;
+  }
+  100% {
+    transform: scale(1);
+    border-radius: 0%;
+  }
+}
+/* Animazione 3 Fine */
+
+/* Animazione 4*/
+.unicamente .contenitore-album .album:hover img{
+  animation-name: animazione-4;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+@keyframes animazione-4{
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Animazione 4 Fine */
+
+/* Animazione 5*/
+.artisti-popolari .contenitore-album .album:hover img{
+  animation-name: animazione-5;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+@keyframes animazione-5 {
+  50% {
+    border-radius: 0%;
+    transform: scale(0.3);
+    transform: rotate(180deg);
+  }
+  100% {
+    border-radius: 50%;
+    transform: scale(1);
+    transform: rotate(360deg);
+  }
+}
+/* Animazione 5 Fine */
 
 
 /* Aside */
@@ -606,7 +680,7 @@ footer .contenitore-destra hr:hover:before{
   }
 }
 
-@media screen and (max-height: 414px) {
+/* @media screen and (max-height: 414px) {
   aside .contenuto-nascosto ul:first-child li:not(li:first-child),
   aside .contenuto-nascosto ul:last-child li:first-child{
     display: none;
@@ -623,4 +697,4 @@ footer .contenitore-destra hr:hover:before{
   header {
     background-color: #191919;
   }
-}
+} */
