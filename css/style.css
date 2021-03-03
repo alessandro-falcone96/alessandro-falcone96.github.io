@@ -3,53 +3,698 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Grandezze 4 macroaree */
+header{
+  width: calc(100% - 275px);
+  height: 75px;
+  background-color: #1B0721;
+  position: fixed;
+  top: 0;
+  left: 275px;
+  z-index: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+main{
+  width: calc(100% - 275px);
+  height: calc(100vh - 175px);
+  margin-left: 275px;
+  margin-top: 75px;
+  overflow: auto;
+  flex-shrink: 1;
+}
+
+aside{
+  height: calc(100vh - 100px);
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  width: 275px;
+  position: absolute;
+}
+footer{
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
 
 /* General */
-.fs20{
-  font-size: 20px;
+.flex{
+  display: flex;
 }
-.fs30{
-  font-size: 30px;
+.contenitore-album{
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
-.fs50{
-  font-size: 50px;
-}
-.mt50{
-  margin-top: 50px;
-}
-.tac{
+.contenitore-album .album{
+  width: calc((100% - 100px) / 5);
   text-align: center;
+  margin: 0px 10px;
+}
+.contenitore-album .album img{
+  width: 100%;
+}
+
+
+.m0-5{
+  margin: 0px 5px;
+}
+.m0-10{
+  margin: 0px 10px;
+}
+.m0-20{
+  margin: 0px 20px;
+}
+.m10-0{
+  margin: 10px 0px;
+}
+.m15-0{
+  margin: 15px 0px;
+}
+.m10-0-10-15{
+  margin: 10px 0px 10px 15px;
+}
+.mb5{
+  margin-bottom: 5px;
+}
+.mt5{
+  margin-top: 5px;
+}
+.ml10{
+  margin-left: 10px;
+}
+.ml30{
+  margin-left: 30px;
+}
+.m10{
+  margin-right: 10px;
+}
+.m30{
+  margin-right: 30px;
+}
+.p10{
+  padding: 10px;
+}
+.p20{
+  padding: 20px;
+}
+.pl10{
+  padding-left: 10px;
+}
+.pt10{
+  padding-top: 10px;
+}
+.pt20{
+  padding-top: 20px;
+}
+.p0-5{
+  padding: 0px 5px;
+}
+.p0-10{
+  padding: 0px 10px;
+}
+.p0-15{
+  padding: 0px 15px;
+}
+.p8-35{
+  padding: 8px 35px;
+}
+.p5-0-10-15{
+  padding: 5px 0px 10px 15px;
+}
+.p5-0-20-20{
+  padding: 5px 0px 20px 20px;
+}
+.p10-0-5-0{
+  padding: 10px 0px 5px 0px;
+}
+.p10-0-5-15{
+  padding: 10px 0px 5px 15px;
+}
+.p20-0-5-20{
+  padding: 20px 0px 5px 20px;
+}
+.p20-0-20-20{
+  padding: 20px 0px 20px 20px;
 }
 .white{
   color: white;
 }
-.yellow{
-  color: yellow;
+.lightgrey{
+  color: lightgrey;
+}
+.grey{
+  color: grey;
 }
 
-/* Body */
-body{
-  background-color: #034820;
+
+main > div,
+main > nav{
+  background-color: #131313;
 }
-section{
-  display: flex;
-  border: 1px solid white;
+
+/* Overlay IMG */
+.contenitore-album .album .cont{
+  position: relative;
+}
+.contenitore-album .album .cont .middle {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.contenitore-album .album .cont .middle i{
+  color: white;
+}
+.contenitore-album .album:hover img {
+  opacity: 0.5;
+}
+.contenitore-album .album:hover .middle {
+  opacity: 1;
+}
+
+/* Animazione 1*/
+.recently .contenitore-album .album:hover img{
+  animation-name: animazione-1;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+@keyframes animazione-1{
+  100% {transform: rotate(360deg);}
+}
+/* Animazione 1 Fine */
+
+/* Animazione 2*/
+.creato-per .contenitore-album .album:hover img{
+  animation-name: animazione-2;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+@keyframes animazione-2{
+  50% {
+    transform: scale(1.3);
+    border-radius: 50%;
+  }
+  100% {
+    transform: scale(1);
+    border-radius: 0%;
+  }
+}
+/* Animazione 2 Fine */
+
+/* Animazione 3*/
+.tue-playlist .contenitore-album .album:hover img{
+  animation-name: animazione-3;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+@keyframes animazione-3{
+  50% {
+    transform: scale(0.7);
+    border-radius: 50%;
+  }
+  100% {
+    transform: scale(1);
+    border-radius: 0%;
+  }
+}
+/* Animazione 3 Fine */
+
+/* Animazione 4*/
+.unicamente .contenitore-album .album:hover img{
+  animation-name: animazione-4;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+@keyframes animazione-4{
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Animazione 4 Fine */
+
+/* Animazione 5*/
+.artisti-popolari .contenitore-album .album:hover img{
+  animation-name: animazione-5;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+@keyframes animazione-5 {
+  50% {
+    border-radius: 0%;
+    transform: scale(0.3);
+    transform: rotate(180deg);
+  }
+  100% {
+    border-radius: 50%;
+    transform: scale(1);
+    transform: rotate(360deg);
+  }
+}
+/* Animazione 5 Fine */
+
+
+/* Aside */
+aside ul li{
+  list-style: none;
+}
+aside > *{
+  width: 90%;
+  margin: auto;
+}
+aside .playlist h4,
+aside .installa h6,
+aside .user-me h5{
+  align-self: center;
+}
+
+aside .logo{
+  height: 75px;
+  align-items: center;
+}
+aside .logo h1{
+  font-size: 30px;
+}
+
+aside .nav-principale{
+  height: 125px;
+}
+aside ul.nav-principale li:hover{
+  color: white;
+  border-left: 2px solid green;
+}
+
+aside .playlist{
+  height: 125px;
+  border-bottom: 1px solid grey;
+}
+aside .playlist h3{
+  text-transform: uppercase;
+  font-size: 15px;
+}
+aside .playlist img{
+  height: 28px;
+  width: 28px;
+  border-radius: 3px;
+}
+aside .playlist h4{
+  align-self: center;
+}
+aside .playlist h4:hover,
+aside ul.lista-playlist li:hover{
+  color: white;
+}
+
+aside .lista-playlist{
+  height: calc(100% - 415px);
+}
+aside ul.lista-playlist{
+  overflow: auto;
+}
+aside ul.lista-playlist li{
+  font-size: 15px;
+}
+
+aside .utente{
+  height: 90px;
+}
+aside .installa{
+  border-bottom: 1px solid grey;
+}
+aside .installa:hover{
+  color: white;
+}
+aside .user-me img{
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
 }
-.contenuto{
-  width: 100%;
+aside .user-me h5{
+  align-self: center;
 }
-div.giocatore1,
-div.giocatore2{
+
+aside hr{
+  height: 1px;
+  color: grey;
+  background-color: grey;
+}
+
+aside .contenuto-nascosto{
+  display: none;
+  text-align: center;
+}
+
+aside .contenuto-nascosto img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+aside .contenuto-nascosto ul:last-child{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/* Header */
+
+
+header .sinistra{
+  flex-shrink: 0;
+}
+header .sinistra i:hover{
+  cursor: pointer;
+}
+header .destra .upgrade{
+  background-color: yellow;
+  border-radius: 25px;
+  background-color: black;
+  border: 1px solid white;
+}
+header .destra a{
+  text-decoration: none;
+}
+header .destra .upgrade a{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  align-self: center;
+}
+header .destra .user{
+  align-items: center;
+  background-color: black;
+  border-radius: 25px;
+}
+header .destra .upgrade:hover,
+header .destra .user:hover{
+  background-color: #131313;
+  transform: scale(1.2);
+}
+header .destra .user img{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+header .destra .user a{
+  letter-spacing: 1px;
+}
+
+
+/* Main */
+
+main nav ul{
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+main nav ul li{
+  line-height: 45px;
+}
+main nav ul li a{
+  text-decoration: none;
+  text-transform: uppercase;
+}
+main nav ul li a:hover{
+  color: white;
+}
+
+main nav li a{
+	position: relative;
+}
+main nav li a:before,
+main nav li a:after {
+    content: '';
+    display: block;
+    position: absolute;
+}
+main nav li a:after {
+  width: 40px;
+  left: 50%;
+  transform: translate(-50%);
+  border-bottom: 2px solid green;
+  border-right: 2px solid green;
+  opacity: 0;
+}
+main nav ul li a:hover::after{
+  opacity: 1;
+}
+
+main .artisti-popolari .contenitore-album .album img{
+  border-radius: 50%;
+}
+
+/* Footer */
+footer .contenitore-sinistra{
+  background-color: #191919;
+  width: 25%;
+  align-items: center;
+  /* border: 1px solid green; */
+}
+footer .contenitore-sinistra img{
+  height: 75px;
+  width: 75px;
+}
+footer .contenitore-sinistra h6:hover{
+  color: white;
+  text-decoration: underline;
+}
+footer .contenitore-sinistra i:hover{
+  cursor: pointer;
+  color: green;
+}
+
+footer .contenitore-centro{
+  background-color: #191919;
   width: 50%;
-  height: 100vh;
-  display: flex;
+  /* border: 1px solid blue; */
+}
+footer .contenitore-centro .contenitore-alto{
+  background-color: #191919;
+  height: 60%;
+  justify-content: center;
+  align-items: center;
+}
+footer .contenitore-centro .contenitore-alto i:hover{
+  cursor: pointer;
+  color: green;
+}
+footer .contenitore-centro .contenitore-basso{
+  background-color: #191919;
+  height: 40%;
   align-items: center;
   justify-content: center;
 }
-div.giocatore1{
-  border-right: 1px solid white;
+footer .contenitore-centro .contenitore-basso hr{
+  height: 5px;
+  width: 60%;
+  background-color: grey;
+  border: 1px solid grey;
+  position: relative;
+  border-radius: 15px;
 }
-div.giocatore2{
-  border-left: 1px solid white;
+
+footer .contenitore-centro .contenitore-basso hr:before{
+    background-color: lightgrey;
+    border: 1px solid lightgrey;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    content: '';
+    display: block;
+    height: 8px;
+    left: 0;
+    position: absolute;
+    top: -2px;
+    width: 20%;
+    z-index: 1;
+}
+footer .contenitore-centro .contenitore-basso hr:hover:before{
+  background-color: green;
+  border: 1px solid green;
+}
+
+footer .contenitore-destra{
+  background-color: #191919;
+  width: 25%;
+  align-items: center;
+  justify-content: flex-end;
+  /* border: 1px solid green; */
+}
+footer .contenitore-destra i:hover{
+  cursor: pointer;
+  color: green;
+}
+footer .contenitore-destra hr{
+  height: 5px;
+  width: 40%;
+  background-color: grey;
+  border: 1px solid grey;
+  position: relative;
+  border-radius: 15px;
+}
+footer .contenitore-destra hr:before{
+    background-color: lightgrey;
+    border: 1px solid lightgrey;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    content: '';
+    display: block;
+    height: 8px;
+    left: 0;
+    position: absolute;
+    top: -2px;
+    width: 70%;
+    z-index: 1;
+}
+footer .contenitore-destra hr:hover:before{
+  background-color: green;
+}
+
+/* Media Query */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  aside{
+    width: 225px;
+  }
+  header{
+    width: calc(100% - 225px);
+    left: 225px;
+  }
+  main{
+    width: calc(100% - 225px);
+    margin-left: 225px;
+  }
+
+  header .destra .user a,
+  header .destra .user i{
+    display: none;
+  }
+  .contenitore-album .album{
+    width: calc((100% - 80px) / 4);
+  }
+  main .recently .contenitore-album{
+    flex-wrap: wrap;
+  }
+  main nav ul{
+    flex-wrap: wrap;
+  }
+  main nav ul li{
+    justify-content: center;
+  }
+
+  footer .contenitore-sinistra img{
+    height: 50px;
+    width: 50px;
+  }
+  footer .contenitore-sinistra i.fa-folder{
+    display: none;
+  }
+  footer .contenitore-sinistra .canzone-riprodotta{
+    margin-right: 15px;
+  }
+
+  footer .contenitore-centro .contenitore-basso hr{
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  aside{
+    width: 75px;
+  }
+  header{
+    width: calc(100% - 75px);
+    left: 75px;
+  }
+  main{
+    width: calc(100% - 75px);
+    margin-left: 75px;
+  }
+  header .destra .upgrade{
+    display: none;
+  }
+  header .destra .user a,
+  header .destra .user i{
+    display: none;
+  }
+  header .destra .user img{
+    height: 60px;
+    width: 60px;
+  }
+  main nav ul li a{
+    font-size: 20px;
+  }
+  .contenitore-album .album{
+    width: calc((100% - 40px) / 2);
+  }
+  main nav ul{
+    flex-wrap: wrap;
+  }
+  main nav ul li{
+    justify-content: center;
+    font-size: 15px;
+  }
+  footer .contenitore-sinistra img{
+    height: 50px;
+    width: 50px;
+  }
+  footer .contenitore-sinistra i.fa-folder{
+    display: none;
+  }
+  footer .contenitore-sinistra .canzone-riprodotta{
+    margin-right: 15px;
+  }
+  footer .contenitore-centro .contenitore-basso hr{
+    width: 60%;
+  }
+
+  aside > *:not(div:last-child){
+    display: none;
+  }
+  aside .contenuto-nascosto{
+    display: block;
+  }
+  aside .contenuto-nascosto ul li i:hover:not(.fa-spotify){
+    color: white;
+    border-left: 2px solid green;
+  }
+}
+
+@media screen and (max-height: 414px) {
+  aside .contenuto-nascosto ul:first-child li:not(li:first-child),
+  aside .contenuto-nascosto ul:last-child li:first-child{
+    display: none;
+  }
+}
+
+@media screen and (max-height: 202px) {
+  aside .contenuto-nascosto ul:last-child li:last-child{
+    display: none;
+  }
+}
+
+@media screen and (max-height: 175px) {
+  header {
+    background-color: #191919;
+  }
 }

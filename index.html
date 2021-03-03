@@ -1,35 +1,511 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="it" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- Meta Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-    <title>Gioco Dadi</title>
+    <title>SpotifyWeb</title>
   </head>
   <body>
 
-    <!-- Esercizio Gioco Dadi -->
-    <section class="white">
-      <div class="giocatore1">
-        <div class="contenuto">
-          <h2 class="fs50 tac" id="nomePlayer1">Player 1</h2>
-          <h4 class="fs20 tac" id="fichesPlayer1"></h4>
-          <h3 class="fs30 mt50 tac yellow" id="numPlayer1"></h3>
-          <h1 class="fs30 mt50 tac" id="risultatoPlayer1"></h1>
+    <header class="flex">
+      <div class="sinistra ml10">
+        <i class="fas fa-arrow-circle-left fa-2x m0-5"></i>
+        <i class="fas fa-arrow-circle-right fa-2x m0-5"></i>
+      </div>
+      <div class="destra flex mr30">
+        <div class="upgrade flex">
+          <a class="p8-35 mr10 white" href="#">Effettua l'Upgrade</a>
+        </div>
+        <div class="user flex ml30">
+          <img src="img/foto-profilo.jpg" alt="">
+          <a class="p0-5 white" href="#">Alessandro Falcone</a>
+          <i class="fas fa-caret-down mr10 white"></i>
         </div>
       </div>
-      <div class="giocatore2">
-        <div class="contenuto">
-          <h2 class="fs50 tac" id="nomePlayer2">Player 2</h2>
-          <h4 class="fs20 tac" id="fichesPlayer2"></h4>
-          <h3 class="fs30 mt50 tac yellow" id="numPlayer2"></h3>
-          <h1 class="fs30 mt50 tac" id="risultatoPlayer2"></h1>
+    </header>
+
+    <main>
+
+      <nav>
+        <ul class="flex pt20">
+          <li class="p0-10"><a class="grey" href="#">In Evidenza</a></li>
+          <li class="p0-10"><a class="grey" href="#">Podcast</a></li>
+          <li class="p0-10"><a class="grey" href="#">Classifiche</a></li>
+          <li class="p0-10"><a class="grey" href="#">Generi e Mood</a></li>
+          <li class="p0-10"><a class="grey" href="#">Nuove Uscite</a></li>
+          <li class="p0-10"><a class="grey" href="#">Scopri</a></li>
+        </ul>
+      </nav>
+
+      <div class="recently">
+        <h2 class="p20 white">Ascoltate di recente</h2>
+        <div class="contenitore-album flex">
+          <div class="album">
+            <div class="cont">
+              <img src="img/like.png" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+            <h4 class="m15-0 white">Brani preferiti</h4>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/dance-classics.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Dance Classics</h4>
+            <h6 class="m15-0 lightgrey">Dance radio from the 90s and 00s!</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/fino-al-mattino.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Fino Al Mattino</h4>
+            <h6 class="m15-0 lightgrey">Questa è la tua notte, balla fino al mattino</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/daily-mix-1.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Daily Mix 1</h4>
+            <h6 class="m15-0 lightgrey">Boomdabash, Maneskin, Random e altro</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/playlist-salmo.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Salmo</h4>
+            <h6 class="m15-0 lightgrey">Di Alessandro Falcone</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/daily-mix-2.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Daily Mix 2</h4>
+            <h6 class="m15-0 lightgrey">Dimitri Vegas & Like Mike, Jax Jones, Avicii e altro</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/salmo.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Playlist Live</h4>
+            <h6 class="m15-0 lightgrey">Salmo</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/preferiti-2020.jpg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">I tuoi brani preferiti del 2020</h4>
+            <h6 class="m15-0 lightgrey">I brani che hai amato di più quest'ano</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/melancholia.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">What are you afraid of?</h4>
+            <h6 class="m15-0 lightgrey">Melancholia</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/festa-italiana.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Festa italiana</h4>
+            <h6 class="m15-0 lightgrey">Le canzoni per la tua festa tutta italiana</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/top-50.jpg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Top 50 Italia</h4>
+            <h6 class="m15-0 lightgrey">Il tuo aggiornamento continuo sui brani più ascoltati</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/tiesto.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">This is Tiësto</h4>
+            <h6 class="m15-0 lightgrey">Tiësto's best songs, remixes and compilations.</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/mood-vecchia.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Mood Vecchia</h4>
+            <h6 class="m15-0 lightgrey">Di Falcuz96</h6>
+          </div>
         </div>
       </div>
-    </section>
+
+      <div class="creato-per">
+        <h2 class="p20-0-5-20 white">Creato per Alessandro Falcone</h2>
+        <h6 class="p5-0-20-20 lightgrey">Più ascolti, più accurati saranno i suggerimenti</h6>
+        <div class="contenitore-album flex">
+          <div class="album">
+            <div class="cont">
+              <img src="img/daily-mix-1.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Daily Mix 1</h4>
+            <h6 class="p5-0-20-20 lightgrey">Boomdabash, Maneskin, Random e altro</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/daily-mix-2.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Daily Mix 2</h4>
+            <h6 class="p5-0-20-20 lightgrey">Dimitri Vegas & Like Mike, Jax Jones, Avicii e altro</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/daily-mix-3.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Daily Mix 3</h4>
+            <h6 class="p5-0-20-20 lightgrey">Leon Faun, tha Supreme, Sfera Ebbasta e altro</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/daily-mix-4.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Daily Mix 4</h4>
+            <h6 class="p5-0-20-20 lightgrey">Sean Paul, Rihanna, Justin Timberlake e altro</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/daily-mix-5.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Daily Mix 5</h4>
+            <h6 class="p5-0-20-20 lightgrey">Rocco Hunt, Clementino, Salmo e altro</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="tue-playlist">
+        <h2 class="p20-0-20-20 white">Le tue playlist</h2>
+        <div class="contenitore-album flex">
+          <div class="album">
+            <div class="cont">
+              <img src="img/playlist-salmo.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Salmo</h4>
+            <h6 class="p5-0-20-20 lightgrey">Di Alessandro Falcone</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/clementino-salmo.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Clementino-Salmo</h4>
+            <h6 class="p5-0-20-20 lightgrey">Di Alessandro Falcone</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/muse.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Muse</h4>
+            <h6 class="p5-0-20-20 lightgrey">Di Alessandro Falcone</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/rihanna.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Rihanna</h4>
+            <h6 class="p5-0-20-20 lightgrey">Di Alessandro Falcone</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="unicamente">
+        <h2 class="p20-0-20-20 white">Unicamente per te</h2>
+        <div class="contenitore-album flex">
+          <div class="album">
+            <div class="cont">
+              <img src="img/macchina-tempo.jpg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">La macchina del tempo</h4>
+            <h6 class="p5-0-20-20 lightgrey">Abbiamo creato una playlist con brani che ti faranno tornare indietro nel tempo</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/rotazione.jpg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">A rotazione</h4>
+            <h6 class="p5-0-20-20 lightgrey">Le canzoni di cui non ti stanchi mai</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/ritorno-passato.jpg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Ritorno al passato</h4>
+            <h6 class="p5-0-20-20 lightgrey">Brani del passato di cui non ti stancavi mai</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/summer-rewind.jpg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Le tue hit estive del passato</h4>
+            <h6 class="p5-0-20-20 lightgrey">E' il momento delle tue hit estive del passato!</h6>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/like.png" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Brani preferiti</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="artisti-popolari">
+        <h2 class="p20-0-5-20 white">Artisti più popolari</h2>
+        <h6 class="p5-0-20-20 lightgrey">Più ascolti, più accurati saranno i suggerimenti</h6>
+        <div class="contenitore-album flex">
+          <div class="album">
+            <div class="cont">
+              <img src="img/salmo.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">Salmo</h4>
+          </div>
+          <div class="album">
+            <div class="cont">
+              <img src="img/the-supreme.jpeg" alt="">
+              <div class="middle">
+                <i class="far fa-play-circle fa-3x"></i>
+              </div>
+            </div>
+
+            <h4 class="m15-0 white">The Supreme</h4>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <aside class="">
+
+            <div class="logo flex p10-0-5-15">
+              <i class="fab fa-spotify fa-3x"></i>
+              <h1 class="pl10">Spotify</h1>
+            </div>
+
+            <ul class="nav-principale">
+              <li class="p0-15 m15-0 grey"><i class="fas fa-home"></i> <span>Home</span></li>
+              <li class="p0-15 m15-0 grey"><i class="fas fa-search"></i> <span>Cerca</span></li>
+              <li class="p0-15 m15-0 grey"><i class="fas fa-book"></i> <span>La tua libreria</span></li>
+            </ul>
+
+            <div class="playlist p5-0-10-15 grey">
+              <h3 class="p10-0-5-0 white">Playlist</h3>
+              <div class="crea-playlist flex mb5">
+                <i class="fas fa-plus-square fa-2x"></i>
+                <h4 class="pl10">Crea playlist</h4>
+              </div>
+              <div class="brani-preferiti flex mt5">
+                <img src="img/like.png" alt="">
+                <h4 class="pl10">Brani preferiti</h4>
+              </div>
+            </div>
 
 
+            <ul class="lista-playlist">
+              <li class="m10-0-10-15 grey">Mood</li>
+              <li class="m10-0-10-15 grey">Salmo</li>
+              <li class="m10-0-10-15 grey">I tuoi brani preferiti del 2020</li>
+              <li class="m10-0-10-15 grey">10 Summers You Won't Forget</li>
+              <li class="m10-0-10-15 grey">Xfactor 2020</li>
+              <li class="m10-0-10-15 grey">Finley</li>
+              <li class="m10-0-10-15 grey">Mood Vecchia</li>
+              <li class="m10-0-10-15 grey">Le tue hit estive del passato</li>
+              <li class="m10-0-10-15 grey">Muse</li>
+              <li class="m10-0-10-15 grey">Rihanna</li>
+              <li class="m10-0-10-15 grey">Clementino/Salmo</li>
+              <li class="m10-0-10-15 grey">Tomorrowland 2020 Epic Hits</li>
+              <li class="m10-0-10-15 grey">Dance Hits</li>
+              <li class="m10-0-10-15 grey">Dance Party</li>
+              <li class="m10-0-10-15 grey">Benvenunto 2021</li>
+              <li class="m10-0-10-15 grey">All Night Dance Party</li>
+              <li class="m10-0-10-15 grey">Maneskin</li>
+              <li class="m10-0-10-15 grey">Discover Weekly</li>
+            </ul>
 
-    <!-- Script Java -->
-    <script src="js/script.js" charset="utf-8"></script>
+            <div class="utente">
+              <div class="installa flex p10 grey">
+                <i class="far fa-arrow-alt-circle-down fa-xs"></i>
+                <h6 class="pl10">Installa app</h6>
+              </div>
+              <div class="user-me flex pt10">
+                <img class="ml10" src="img/foto-profilo.jpg" alt="">
+                <h5 class="pl10">Alessandro Falcone</h5>
+              </div>
+            </div>
+
+
+            <div class="contenuto-nascosto">
+              <ul>
+                <li><i class="fab fa-spotify fa-2x p0-15 m10-0 white"></i></li>
+                <li><i class="fas fa-home fa-2x p0-15 m10-0 grey"></i></li>
+                <li><i class="fas fa-search fa-2x p0-15 m10-0 grey"></i></li>
+                <li><i class="fas fa-book fa-2x p0-15 m10-0 grey"></i></li>
+              </ul>
+              <ul>
+                <li><i class="far fa-arrow-alt-circle-down fa-2x p0-15 m10-0"></i></li>
+                <li><img src="img/foto-profilo.jpg" alt=""></li>
+              </ul>
+
+            </div>
+
+    </aside>
+
+    <footer class="flex">
+      <div class="contenitore-sinistra flex">
+
+        <img class="m0-20" src="img/happy.jpeg" alt="">
+
+        <div class="canzone-riprodotta mr30">
+          <h5 class="white">Happy</h5>
+          <h6 class="grey">Pharrell Williams</h6>
+        </div>
+
+        <a href="#"><i class="fas fa-heart p0-5 grey"></i></a>
+        <a href="#"><i class="far fa-folder p0-5 grey"></i></a>
+
+      </div>
+      <div class="contenitore-centro">
+        <div class="contenitore-alto flex">
+          <i class="fas fa-random p0-10 white"></i>
+          <i class="fas fa-step-backward p0-10 white"></i>
+          <i class="far fa-play-circle fa-2x p0-10 white"></i>
+          <i class="fas fa-step-forward p0-10 white"></i>
+          <i class="fas fa-redo-alt p0-10 white"></i>
+        </div>
+        <div class="contenitore-basso flex">
+          <p class="white">0:25</p>
+          <hr class="m0-10 grey">
+          <p class="white">3:52</p>
+        </div>
+      </div>
+      <div class="contenitore-destra flex">
+
+        <i class="fas fa-bars lightgrey"></i>
+        <i class="fas fa-desktop ml10 lightgrey"></i>
+        <i class="fas fa-volume-up ml10 lightgrey"></i>
+        <hr class="m0-10 grey">
+      </div>
+    </footer>
+
   </body>
 </html>
