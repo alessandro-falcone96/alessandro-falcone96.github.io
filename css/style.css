@@ -177,7 +177,7 @@ footer h2{
   }
   header img{
     height: 200px;
-    transform: translate(0%, 50%);
+    transform: translate(0%, 70%);
   }
 
   /* Main */
@@ -190,7 +190,7 @@ footer h2{
     margin-left: 50px;
   }
   main .contenitore .name{
-    padding-top: 200px;
+    padding-top: 100px;
   }
   main .contenitore .name h2{
     margin-top: 0;
