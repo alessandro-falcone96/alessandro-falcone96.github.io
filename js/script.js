@@ -1,30 +1,35 @@
-// Esercizio Gioco Dadi
-var nomePlayer1 = prompt("Inserisci il nome del primo giocatore: ");
-var nomePlayer2 = prompt("Inserisci il nome del secondo giocatore: ");
+var adds = 50;
 
-var fichesPlayer = prompt("Quante fiches volete giocare?");
+var listIds = ['cheese', 'tomato', 'egg', 'lettuce', 'mustard', 'ketchup'];
 
-document.getElementById('nomePlayer1').innerHTML = nomePlayer1;
-document.getElementById('nomePlayer2').innerHTML = nomePlayer2;
 
-document.getElementById('fichesPlayer1').innerHTML = fichesPlayer + " fiches";
-document.getElementById('fichesPlayer2').innerHTML = fichesPlayer + " fiches";
 
-var numPlayer1 = Math.floor(Math.random() * 6) + 1;
-var numPlayer2 = Math.floor(Math.random() * 6) + 1;
 
-document.getElementById('numPlayer1').innerHTML = numPlayer1;
-document.getElementById('numPlayer2').innerHTML = numPlayer2;
+document.getElementById('buttonCalculate').addEventListener("click", myFunction);
 
-var fichesTot = fichesPlayer * 2;
+function myFunction() {
+  var nomeInput = document.getElementById('namePerson');
+  if (nomeInput.value.trim() == '') {
+    alert("Please insert your name");
+  } else {
 
-if (numPlayer1 > numPlayer2) {
-  document.getElementById('risultatoPlayer1').innerHTML = "Hai vinto " + fichesTot + " fiches!";
-  document.getElementById('risultatoPlayer2').innerHTML = "Hai perso " + fichesPlayer + " fiches!";
-} else if (numPlayer1 < numPlayer2) {
-  document.getElementById('risultatoPlayer2').innerHTML = "Hai vinto " + fichesTot + " fiches!";
-  document.getElementById('risultatoPlayer1').innerHTML = "Hai perso " + fichesPlayer + " fiches!";
-} else {
-  document.getElementById('risultatoPlayer1').innerHTML = "E' patta!";
-  document.getElementById('risultatoPlayer2').innerHTML = "E' patta!";
+    for (var i = 0; i < listIds.length; i++) {
+      if (document.getElementById(listIds[i]).checked) {
+        adds += 3;
+      }
+    }
+
+    var couponInput = document.getElementById('coupon');
+    if (couponInput.value == "ALE2021") {
+      adds = adds * 80 / 100;
+    }
+
+    document.getElementById('price').innerHTML = adds;
+    adds = 50;
+
+  }
+
 }
+
+
+// Prezzo AddsOn: 1: 2: 3: 4: 5: 6:
