@@ -32,6 +32,7 @@ header{
 header h1{
   align-self: center;
   margin-left: 30px;
+  font-weight: 900;
 }
 header img{
   height: 175px;
@@ -148,8 +149,6 @@ main .contenitore .bottone a button{
 }
 
 
-
-
 footer{
   background-color: #D33359;
   color: white;
@@ -164,4 +163,63 @@ footer h3{
 }
 footer h2{
   margin-right: 30px;
+}
+
+
+/* Media Query */
+@media screen and (max-width: 1200px) {
+  /* Header */
+  header{
+    width: 100%;
+  }
+  header h1{
+    font-size: 100px;
+    margin-left: 50px;
+  }
+  header img{
+    height: 400px;
+    transform: translate(0%, 0%);
+  }
+
+  /* Main */
+  main{
+    width: 100%;
+  }
+  main .contenitore{
+    margin-left: 50px;
+  }
+  main .contenitore .name{
+    padding-top: 50px;
+  }
+  main .contenitore .name h2{
+    margin-top: 0;
+    font-size: 75px;
+  }
+  main .contenitore .name input{
+    margin-left: 30px;
+    font-size: 50px;
+  }
+
+  main .contenitore h3{
+    font-size: 50px;
+  }
+
+  main .contenitore .contenitore-ingredienti{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+  }
+  main .contenitore .contenitore-ingredienti .ingrediente{
+    width: 50%;
+  }
+  main .contenitore .contenitore-ingredienti .ingrediente ul li{
+    list-style: none;
+  }
+  main .contenitore .contenitore-ingredienti .ingrediente ul li img{
+    height: 50px;
+  }
+  main .contenitore .contenitore-ingredienti .ingrediente ul li input{
+    color: #D33359;
+  }
+
 }
