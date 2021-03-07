@@ -176,20 +176,21 @@ footer h2{
     margin-left: 50px;
   }
   header img{
-    height: 300px;
-    transform: translate(0%, 75%);
+    height: 200px;
+    transform: translate(0%, 50%);
   }
 
   /* Main */
   main{
     width: 100%;
-    min-height: 73vh;
+    min-height: 77vh;
+    height: 100%;
   }
   main .contenitore{
     margin-left: 50px;
   }
   main .contenitore .name{
-    padding-top: 150px;
+    padding-top: 200px;
   }
   main .contenitore .name h2{
     margin-top: 0;
