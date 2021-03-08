@@ -1,4 +1,4 @@
-var adds = 50;
+var adds = 5;
 
 var listIds = ['cheese', 'tomato', 'egg', 'lettuce', 'mustard', 'ketchup'];
 
