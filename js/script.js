@@ -15,7 +15,7 @@ function myFunction() {
 
     for (var i = 0; i < listIds.length; i++) {
       if (document.getElementById(listIds[i]).checked) {
-        adds += 3;
+        adds += 1;
       }
     }
 
@@ -25,7 +25,7 @@ function myFunction() {
     }
 
     document.getElementById('price').innerHTML = adds;
-    adds = 50;
+    adds = 5;
 
   }
 
