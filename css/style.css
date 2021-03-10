@@ -30,4 +30,8 @@ section{
 }
 section h3{
   margin: 10px 0px;
+  color: darkblue;
+}
+section h4{
+  color: lightblue;
 }
