@@ -1,17 +1,39 @@
-var listaMultipli = [];
-var input = parseInt(prompt("Inserisci un numero: "));
-var n = 1;
-var divisore = 1;
+$(".fa-angle-right").click(
+  function() {
+    var imgActive = $('.images img.active');
+    var circleActive = $('.nav i.active');
 
-do {
-  if ((n % divisore) == 0) {
-    listaMultipli.push(divisore);
-    divisore++;
-  } else {
-    listaMultipli = [];
-    divisore = 1;
-    n++;
+    if (($('.images img.active')).is('.last')) {
+      $(imgActive).removeClass("active");
+      $('.images img.first').addClass("active");
+      $(circleActive).removeClass("active");
+      $('.nav i.first').addClass("active");
+    } else {
+      $(imgActive).removeClass("active");
+      $(imgActive).next().addClass("active");
+      $(circleActive).removeClass("active");
+      $(circleActive).next().addClass("active");
+    }
+
   }
-} while (listaMultipli.length <= (input - 1));
-console.log(n);
-alert(n + " è il numero più piccolo che può essere diviso da tutti i numeri da 1 a " + input + " senza resto");
+);
+
+$(".fa-angle-left").click(
+  function() {
+    var imgActive = $('.images img.active');
+    var circleActive = $('.nav i.active');
+
+    if (($('.images img.active')).is('.first')) {
+      $(imgActive).removeClass("active");
+      $('.images img.last').addClass("active");
+      $(circleActive).removeClass("active");
+      $('.nav i.last').addClass("active");
+    } else {
+      $(imgActive).removeClass("active");
+      $(imgActive).prev().addClass("active");
+      $(circleActive).removeClass("active");
+      $(circleActive).prev().addClass("active");
+    }
+
+  }
+);
