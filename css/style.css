@@ -61,9 +61,9 @@
 }
 
 
-/* @media screen and (max-width: 1200px) {
+@media only screen and (orientation: portrait) {
   .slider-wrapper{
     height: 20%;
     margin: 30% auto;
   }
-} */
+}
