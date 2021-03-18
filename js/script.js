@@ -1,169 +1,31 @@
-$(".fa-angle-right").click(
-  function() {
-    var imgActive = $('.images img.active');
-    var circleActive = $('.nav i.active');
+$(document).ready(function() {
 
-    if (imgActive.is('.last')) {
-      $(imgActive).removeClass("active");
-      $('.images img.first').addClass("active");
-      $(circleActive).removeClass("active");
-      $('.nav i.first').addClass("active");
-    } else {
-      $(imgActive).removeClass("active");
-      $(imgActive).next().addClass("active");
-      $(circleActive).removeClass("active");
-      $(circleActive).next().addClass("active");
-    }
+  // Al click del bottone l'utente può inserire articoli nella lista della spesa
+  $("button").click(
+    function() {
 
-  }
-);
+      var listaSpesa = [];
+      var num = parseInt(prompt("Quanti articoli vuoi inserire?"));
 
-$('html').keydown(function(e){
-  if ((e.which) == 39) {    //39 freccia destra
-    {
-      var imgActive = $('.images img.active');
-      var circleActive = $('.nav i.active');
+      for (var i = 1; i <= num; i++) {
+        var articolo = prompt("Aggiungi il " + i + "° articolo:");
+        listaSpesa.push(articolo);
+      }
 
-      if (imgActive.is('.last')) {
-        $(imgActive).removeClass("active");
-        $('.images img.first').addClass("active");
-        $(circleActive).removeClass("active");
-        $('.nav i.first').addClass("active");
-      } else {
-        $(imgActive).removeClass("active");
-        $(imgActive).next().addClass("active");
-        $(circleActive).removeClass("active");
-        $(circleActive).next().addClass("active");
+      for (var j = 0; j < listaSpesa.length; j++) {
+
+        var template = $('.template li').clone();
+        template.prepend(listaSpesa[j]);
+        $('.tobuy-list').append(template);
+
       }
 
     }
-  }
-});
+  );
 
-$(".fa-angle-left").click(
-  function() {
-    var imgActive = $('.images img.active');
-    var circleActive = $('.nav i.active');
+  // Al click della X l'utente cancella l'articolo selezionato
+  $(document).on('click', 'span', function() {
+    $(this).parent().remove();
+  });
 
-    if (imgActive.is('.first')) {
-      $(imgActive).removeClass("active");
-      $('.images img.last').addClass("active");
-      $(circleActive).removeClass("active");
-      $('.nav i.last').addClass("active");
-    } else {
-      $(imgActive).removeClass("active");
-      $(imgActive).prev().addClass("active");
-      $(circleActive).removeClass("active");
-      $(circleActive).prev().addClass("active");
-    }
-  }
-);
-
-$('html').keydown(function(e){
-  if ((e.which) == 37) {    //37 freccia sinistra
-    {
-      var imgActive = $('.images img.active');
-      var circleActive = $('.nav i.active');
-
-      if (imgActive.is('.first')) {
-        $(imgActive).removeClass("active");
-        $('.images img.last').addClass("active");
-        $(circleActive).removeClass("active");
-        $('.nav i.last').addClass("active");
-      } else {
-        $(imgActive).removeClass("active");
-        $(imgActive).prev().addClass("active");
-        $(circleActive).removeClass("active");
-        $(circleActive).prev().addClass("active");
-      }
-    }
-  }
-});
-
-$(".fa-circle").click(
-  function() {
-
-    var circle = $(this);
-    var imgActive = $('.images img.active');
-    var circleActive = $('.nav i.active');
-
-
-    if (circle.is('.first')) {
-      $(imgActive).removeClass("active");
-      $('.images img.first').addClass("active");
-      $(circleActive).removeClass("active");
-      $('.nav i.first').addClass("active");
-    } else if (circle.is('.second')) {
-      $(imgActive).removeClass("active");
-      $('.images img.second').addClass("active");
-      $(circleActive).removeClass("active");
-      $('.nav i.second').addClass("active");
-    } else if (circle.is('.third')) {
-      $(imgActive).removeClass("active");
-      $('.images img.third').addClass("active");
-      $(circleActive).removeClass("active");
-      $('.nav i.third').addClass("active");
-    } else if (circle.is('.fourth')) {
-      $(imgActive).removeClass("active");
-      $('.images img.fourth').addClass("active");
-      $(circleActive).removeClass("active");
-      $('.nav i.fourth').addClass("active");
-    } else if (circle.is('.fifth')) {
-      $(imgActive).removeClass("active");
-      $('.images img.fifth').addClass("active");
-      $(circleActive).removeClass("active");
-      $('.nav i.fifth').addClass("active");
-    } else if (circle.is('.sixth')) {
-      $(imgActive).removeClass("active");
-      $('.images img.sixth').addClass("active");
-      $(circleActive).removeClass("active");
-      $('.nav i.sixth').addClass("active");
-    } else if (circle.is('.last')) {
-      $(imgActive).removeClass("active");
-      $('.images img.last').addClass("active");
-      $(circleActive).removeClass("active");
-      $('.nav i.last').addClass("active");
-    }
-
-  }
-);
-
-
-
-$("img.active").on( "swiperight", function(){
-  {
-    var imgActive = $('.images img.active');
-    var circleActive = $('.nav i.active');
-
-    if (imgActive.is('.last')) {
-      $(imgActive).removeClass("active");
-      $('.images img.first').addClass("active");
-      $(circleActive).removeClass("active");
-      $('.nav i.first').addClass("active");
-    } else {
-      $(imgActive).removeClass("active");
-      $(imgActive).next().addClass("active");
-      $(circleActive).removeClass("active");
-      $(circleActive).next().addClass("active");
-    }
-  }
-});
-
-$("img.active").on( "swipeleft", function(){
-  {
-    var imgActive = $('.images img.active');
-    var circleActive = $('.nav i.active');
-
-    if (imgActive.is('.first')) {
-      $(imgActive).removeClass("active");
-      $('.images img.last').addClass("active");
-      $(circleActive).removeClass("active");
-      $('.nav i.last').addClass("active");
-    } else {
-      $(imgActive).removeClass("active");
-      $(imgActive).prev().addClass("active");
-      $(circleActive).removeClass("active");
-      $(circleActive).prev().addClass("active");
-    }
-  }
 });
