@@ -51,3 +51,36 @@ span{
   position: absolute;
   left: 200px;
 }
+
+
+@media screen and (max-width: 1200px) {
+  /* Header */
+  header{
+    padding: 30px 45px;
+  }
+  header h1{
+    font-size: 150px;
+  }
+  /* Main */
+  main{
+    padding: 15px 100px;
+  }
+  main li{
+    font-size: 125px;
+  }
+
+  /* Button */
+  button{
+    padding: 35px;
+    font-size: 100px;
+    border-radius: 50px;
+    bottom: 250px;
+    right: 100px;
+  }
+
+
+  /* Template */
+  span{
+    left: 750px;
+  }
+}
