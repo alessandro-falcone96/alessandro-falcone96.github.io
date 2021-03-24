@@ -1,249 +1,233 @@
-// Milestone 1
-// Partendo dalla seguente struttura dati , mostriamo in pagina tutte le icone disponibili come da layout.
-//
-// Milestone 2
-// Coloriamo le icone per tipo
-//
-// Milestone 3
-// Creiamo una select con i tipi di icone e usiamola per filtrare le icone
+$(document).ready(function() {
 
-const icons = [
-  {
-    name: 'apple-alt',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "food"
-  },
-  {
-    name: 'ice-cream',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "food"
-  },
-  {
-    name: 'fish',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "food"
-  },
-  {
-    name: 'lemon',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "food"
-  },
-  {
-    name: 'hamburger',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "food"
-  },
-  {
-    name: 'pizza-slice',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "food"
-  },
-  {
-    name: 'beer',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "beverage"
-  },
-  {
-    name: 'glass-whiskey',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "beverage"
-  },
-  {
-    name: 'wine-bottle',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "beverage"
-  },
-  {
-    name: 'cocktail',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "beverage"
-  },
-  {
-    name: 'coffee',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "beverage"
-  },
-  {
-    name: 'glass-martini',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "beverage"
-  },
-  {
-    name: 'dragon',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "animal"
-  },
-  {
-    name: 'kiwi-bird',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "animal"
-  },
-  {
-    name: 'frog',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "animal"
-  },
-  {
-    name: 'hippo',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "animal"
-  },
-  {
-    name: 'otter',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "animal"
-  },
-  {
-    name: 'horse',
-    family: 'fas',
-    prefix: 'fa-',
-    category: "animal"
-  },
-];
-
-
-
-// Milestone 1
-
-icons.forEach((element, array) => {
-  let icona = `<div>
-                <i class="${element.family} ${element.prefix}${element.name} ${element.category}"></i>
-                <div class="title">${element.name}</div>
-              </div>`;
-  $('.icons').append(icona);
-});
-
-
-// Milestone 2
-
-// var iconeFontawesome = document.getElementsByTagName("i");
-// for(var i = 0; i < iconeFontawesome.length; i++){
-//
-//    if (iconeFontawesome[i].classList.contains("food")) {
-//      $(iconeFontawesome[i]).addClass("green");
-//    } else if (iconeFontawesome[i].classList.contains("beverage")) {
-//      $(iconeFontawesome[i]).addClass("blue");
-//    } else {
-//      $(iconeFontawesome[i]).addClass("orange");
-//    }
-//
-// }
-
-
-// Milestone 3
-
-var filteredIcons = [];
-
-$('select').change(function(){
-
-  $(".icons").empty();
-
-  if (this.value == "food") {
-    filteredIcons = icons.filter((element) => {
-      return element.category =="food";
-    })
-  } else if (this.value == "beverage") {
-    filteredIcons = icons.filter((element) => {
-      return element.category =="beverage";
-    })
-  } else if (this.value == "animal") {
-    filteredIcons = icons.filter((element) => {
-      return element.category =="animal";
-    })
-  } else {
-    filteredIcons = icons.map((element) => {
-      return element;
-    })
-  }
-
-  filteredIcons.forEach((element, array) => {
-    let icona = `<div>
-                  <i class="${element.family} ${element.prefix}${element.name} ${element.category}"></i>
-                  <div class="title">${element.name}</div>
-                </div>`;
-    $('.icons').append(icona);
+  $('.squaletto img').hover(function() {
+    $('.contenitore-supporto .scritta').toggle();
   });
 
+  // Azioni finto carousel
 
+  $(".terza-sezione .fa-caret-down").click(
+    function() {
+      var divActive = $('.finto-carousel div.active');
+      var listActive = $('.terza-sezione .contenitore-sinistra ul li.activeBorderColor');
+      var anchorActive = $('.terza-sezione .contenitore-sinistra ul li a.activeColor')
 
+      $(divActive).removeClass("active");
+      $(listActive).removeClass("activeBorderColor");
+      $(anchorActive).removeClass("activeColor");
 
+      if (divActive.is('.last')) {
+        $('.finto-carousel div.first').addClass("active");
+        $('.terza-sezione .contenitore-sinistra ul li.first').addClass("activeBorderColor");
+        $('.terza-sezione .contenitore-sinistra ul li a.first').addClass("activeColor");
+      } else {
+        $(divActive).next().addClass("active");
+        $(listActive).next().addClass("activeBorderColor");
+        $(anchorActive).parent().next().children().addClass("activeColor");
+      }
+    }
+  );
 
+  $(".terza-sezione .fa-caret-up").click(
+    function() {
+      var divActive = $('.finto-carousel div.active');
+      var listActive = $('.terza-sezione .contenitore-sinistra ul li.activeBorderColor');
+      var anchorActive = $('.terza-sezione .contenitore-sinistra ul li a.activeColor');
+
+      $(divActive).removeClass("active");
+      $(listActive).removeClass("activeBorderColor");
+      $(anchorActive).removeClass("activeColor");
+
+      if (divActive.is('.first')) {
+        $('.finto-carousel div.last').addClass("active");
+        $('.terza-sezione .contenitore-sinistra ul li.last').addClass("activeBorderColor");
+        $('.terza-sezione .contenitore-sinistra ul li a.last').addClass("activeColor");
+      } else {
+        $(divActive).prev().addClass("active");
+        $(listActive).prev().addClass("activeBorderColor");
+        $(anchorActive).parent().prev().children().addClass("activeColor");
+      }
+    }
+  );
+
+  // Azioni primo carousel
+  $(".primo-carousel .fa-chevron-right").click(
+    function() {
+      var imgActive = $('.primo-carousel .box-img div.active');
+      var circleActive = $('.quarta-sezione .nav i.active');
+
+      $(imgActive).removeClass("active");
+      $(circleActive).removeClass("active fas");
+      $(circleActive).addClass("far");
+
+      if (imgActive.is('.last')) {
+        $('.primo-carousel .box-img div.first').addClass("active");
+        $('.quarta-sezione .nav i.first').removeClass("active far");
+        $('.quarta-sezione .nav i.first').addClass("active fas");
+      } else {
+        $(imgActive).next().addClass("active");
+        $(circleActive).next().removeClass("active far");
+        $(circleActive).next().addClass("active fas");
+      }
+    }
+  );
+
+  // $('html').keydown(function(evento){
+  //   if ((evento.which) == 39) {    //39 freccia destra
+  //     {
+  //       var imgActive = $('.primo-carousel .box-img div.active');
+  //       var circleActive = $('.quarta-sezione .nav i.active');
+  //
+  //       $(imgActive).removeClass("active");
+  //       $(circleActive).removeClass("active fas");
+  //       $(circleActive).addClass("far");
+  //
+  //       if (imgActive.is('.last')) {
+  //         $('.primo-carousel .box-img div.first').addClass("active");
+  //         $('.quarta-sezione .nav i.first').removeClass("active far");
+  //         $('.quarta-sezione .nav i.first').addClass("active fas");
+  //       } else {
+  //         $(imgActive).next().addClass("active");
+  //         $(circleActive).next().removeClass("active far");
+  //         $(circleActive).next().addClass("active fas");
+  //       }
+  //
+  //     }
+  //   }
+  // });
+
+  $(".primo-carousel .fa-chevron-left").click(
+    function() {
+      var imgActive = $('.primo-carousel .box-img div.active');
+      var circleActive = $('.quarta-sezione .nav i.active');
+
+      $(imgActive).removeClass("active");
+      $(circleActive).removeClass("active fas");
+      $(circleActive).addClass("far");
+
+      if (imgActive.is('.first')) {
+        $('.primo-carousel .box-img div.last').addClass("active");
+        $('.quarta-sezione .nav i.last').removeClass("active far");
+        $('.quarta-sezione .nav i.last').addClass("active fas");
+      } else {
+        $(imgActive).prev().addClass("active");
+        $(circleActive).prev().removeClass("active far");
+        $(circleActive).prev().addClass("active fas");
+      }
+    }
+  );
+
+  // $('html').keydown(function(evento){
+  //   if ((evento.which) == 37) {    //37 freccia sinistra
+  //     {
+  //       var imgActive = $('.primo-carousel .box-img div.active');
+  //       var circleActive = $('.quarta-sezione .nav i.active');
+  //
+  //       $(imgActive).removeClass("active");
+  //       $(circleActive).removeClass("active fas");
+  //       $(circleActive).addClass("far");
+  //
+  //       if (imgActive.is('.first')) {
+  //         $('.primo-carousel .box-img div.last').addClass("active");
+  //         $('.quarta-sezione .nav i.last').removeClass("active far");
+  //         $('.quarta-sezione .nav i.last').addClass("active fas");
+  //       } else {
+  //         $(imgActive).prev().addClass("active");
+  //         $(circleActive).prev().removeClass("active far");
+  //         $(circleActive).prev().addClass("active fas");
+  //       }
+  //     }
+  //   }
+  // });
+
+  // Azioni secondo carousel
+  $(".secondo-carousel .fa-chevron-right").click(
+    function() {
+      var imgActive = $('.settima-sezione div.active');
+      var circleActive = $('.settima-sezione .nav i.active');
+
+      $(imgActive).removeClass("active");
+      $(circleActive).removeClass("active fas");
+      $(circleActive).addClass("far");
+
+      if (imgActive.is('.last')) {
+        $('.settima-sezione div.first').addClass("active");
+        $('.settima-sezione .nav i.first').removeClass("active far");
+        $('.settima-sezione .nav i.first').addClass("active fas");
+      } else {
+        $(imgActive).next().addClass("active");
+        $(circleActive).next().removeClass("active far");
+        $(circleActive).next().addClass("active fas");
+      }
+    }
+  );
+
+  // $('html').keydown(function(evento){
+  //   if ((evento.which) == 39) {    //39 freccia destra
+  //     {
+  //       var imgActive = $('.secondo-carousel div.active');
+  //       var circleActive = $('.settima-sezione .nav i.active');
+  //
+  //       $(imgActive).removeClass("active");
+  //       $(circleActive).removeClass("active fas");
+  //       $(circleActive).addClass("far");
+  //
+  //       if (imgActive.is('.last')) {
+  //         $('.secondo-carousel div.first').addClass("active");
+  //         $('.settima-sezione .nav i.first').removeClass("active far");
+  //         $('.settima-sezione .nav i.first').addClass("active fas");
+  //       } else {
+  //         $(imgActive).next().addClass("active");
+  //         $(circleActive).next().removeClass("active far");
+  //         $(circleActive).next().addClass("active fas");
+  //       }
+  //
+  //     }
+  //   }
+  // });
+
+  $(".secondo-carousel .fa-chevron-left").click(
+    function() {
+      var imgActive = $('.secondo-carousel div.active');
+      var circleActive = $('.settima-sezione .nav i.active');
+
+      $(imgActive).removeClass("active");
+      $(circleActive).removeClass("active fas");
+      $(circleActive).addClass("far");
+
+      if (imgActive.is('.first')) {
+        $('.secondo-carousel div.last').addClass("active");
+        $('.settima-sezione .nav i.last').removeClass("active far");
+        $('.settima-sezione .nav i.last').addClass("active fas");
+      } else {
+        $(imgActive).prev().addClass("active");
+        $(circleActive).prev().removeClass("active far");
+        $(circleActive).prev().addClass("active fas");
+      }
+    }
+  );
+
+  // $('html').keydown(function(evento){
+  //   if ((evento.which) == 37) {    //37 freccia sinistra
+  //     {
+  //       var imgActive = $('.secondo-carousel div.active');
+  //       var circleActive = $('.settima-sezione .nav i.active');
+  //
+  //       $(imgActive).removeClass("active");
+  //       $(circleActive).removeClass("active fas");
+  //       $(circleActive).addClass("far");
+  //
+  //       if (imgActive.is('.first')) {
+  //         $('.secondo-carousel div.last').addClass("active");
+  //         $('.settima-sezione .nav i.last').removeClass("active far");
+  //         $('.settima-sezione .nav i.last').addClass("active fas");
+  //       } else {
+  //         $(imgActive).prev().addClass("active");
+  //         $(circleActive).prev().removeClass("active far");
+  //         $(circleActive).prev().addClass("active fas");
+  //       }
+  //     }
+  //   }
+  // });
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Alternativa per Milestone 1 / 2
-
-// const food = icons.filter((element) => {
-//   return element.category == "food";
-// });
-// const beverage = icons.filter((element) => {
-//   return element.category == "beverage";
-// });
-// const animal = icons.filter((element) => {
-//   return element.category == "animal";
-// });
-//
-// let icona;
-// // Icone Food
-// let iconeFood = "";
-// food.forEach((element, array) => {
-//   icona = `<div>
-//             <i class="${element.family} ${element.prefix}${element.name} green ${element.category}"></i>
-//             <div class="title">${element.name}</div>
-//           </div>`;
-//   iconeFood += icona;
-// });
-// $('.icons').append(iconeFood);
-//
-// // Icone Beverage
-// let iconeBeverage = "";
-// beverage.forEach((element, array) => {
-//   icona = `<div>
-//             <i class="${element.family} ${element.prefix}${element.name} blue ${element.category}"></i>
-//             <div class="title">${element.name}</div>
-//           </div>`;
-//   iconeBeverage += icona;
-// });
-// $('.icons').append(iconeBeverage);
-//
-// // Icone Animal
-// let iconeAnimal = "";
-// animal.forEach((element, array) => {
-//   icona = `<div>
-//             <i class="${element.family} ${element.prefix}${element.name} orange ${element.category}"></i>
-//             <div class="title">${element.name}</div>
-//           </div>`;
-//   iconeAnimal += icona;
-// });
-// $('.icons').append(iconeAnimal);
