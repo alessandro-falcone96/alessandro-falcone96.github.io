@@ -1,233 +1,210 @@
-$(document).ready(function() {
-
-  $('.squaletto img').hover(function() {
-    $('.contenitore-supporto .scritta').toggle();
-  });
-
-  // Azioni finto carousel
-
-  $(".terza-sezione .fa-caret-down").click(
-    function() {
-      var divActive = $('.finto-carousel div.active');
-      var listActive = $('.terza-sezione .contenitore-sinistra ul li.activeBorderColor');
-      var anchorActive = $('.terza-sezione .contenitore-sinistra ul li a.activeColor')
-
-      $(divActive).removeClass("active");
-      $(listActive).removeClass("activeBorderColor");
-      $(anchorActive).removeClass("activeColor");
-
-      if (divActive.is('.last')) {
-        $('.finto-carousel div.first').addClass("active");
-        $('.terza-sezione .contenitore-sinistra ul li.first').addClass("activeBorderColor");
-        $('.terza-sezione .contenitore-sinistra ul li a.first').addClass("activeColor");
-      } else {
-        $(divActive).next().addClass("active");
-        $(listActive).next().addClass("activeBorderColor");
-        $(anchorActive).parent().next().children().addClass("activeColor");
+// Inserisci il codice qui
+var app = new Vue(
+  {
+    el: '#zapp',
+    data: {
+      contacts: [
+        {
+            name: 'Michele',
+            avatar: 'img/avatar_1.jpg',
+            visible: true,
+            colorActive: 'bgwhite',
+            messages: [{
+                date: '10/01/2020 15:30:55',
+                message: 'Hai portato a spasso il cane?',
+                status: 'received'
+              },
+              {
+                  date: '10/01/2020 15:50:00',
+                  message: 'Ricordati di dargli da mangiare',
+                  status: 'received'
+              },
+              {
+                  date: '10/01/2020 16:15:22',
+                  message: 'Tutto fatto!',
+                  status: 'sent'
+              }
+            ],
+        },
+        {
+            name: 'Fabio',
+            avatar: 'img/avatar_2.jpg',
+            visible: true,
+            colorActive: 'bgwhite',
+            messages: [
+              {
+                date: '20/03/2020 16:30:00',
+                message: 'Ciao come stai?',
+                status: 'received'
+              },
+              {
+                date: '20/03/2020 16:30:55',
+                message: 'Bene grazie! Stasera ci vediamo?',
+                status: 'sent'
+              },
+              {
+                date: '20/03/2020 16:35:00',
+                message: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                status: 'received'
+              }
+            ],
+        },
+        {
+            name: 'Samuele',
+            avatar: 'img/avatar_3.jpg',
+            visible: true,
+            colorActive: 'bgwhite',
+            messages: [
+              {
+                date: '28/03/2020 10:10:40',
+                message: 'La Marianna va in campagna',
+                status: 'received'
+              },
+              {
+                date: '28/03/2020 10:20:10',
+                message: 'Sicuro di non aver sbagliato chat?',
+                status: 'sent'
+              },
+              {
+                date: '28/03/2020 16:15:22',
+                message: 'Ah scusa!',
+                status: 'received'
+              }
+            ],
+        },
+        {
+            name: 'Luisa',
+            avatar: 'img/avatar_4.jpg',
+            visible: true,
+            colorActive: 'bgwhite',
+            messages: [
+              {
+                date: '10/01/2020 15:30:55',
+                message: 'Lo sai che ha aperto una nuova pizzeria?',
+                status: 'sent'
+              },
+              {
+                date: '10/01/2020 15:50:00',
+                message: 'Si, ma preferirei andare al cinema',
+                status: 'received'
+              }
+            ],
+        },
+        {
+            name: 'Samantha',
+            avatar: 'img/avatar_5.jpg',
+            visible: true,
+            colorActive: 'bgwhite',
+            messages: [
+              {
+                date: '10/01/2020 15:30:55',
+                message: 'Hai portato a spasso il cane?',
+                status: 'sent'
+              },
+              {
+                date: '10/01/2020 15:50:00',
+                message: 'Ricordati di dargli da mangiare',
+                status: 'sent'
+              },
+              {
+                date: '10/01/2020 16:15:22',
+                message: 'Tutto fatto!',
+                status: 'received'
+              }
+            ],
+        },
+        {
+            name: 'Chiara',
+            avatar: 'img/avatar_6.jpg',
+            visible: true,
+            colorActive: 'bgwhite',
+            messages: [
+              {
+                date: '20/03/2020 16:30:00',
+                message: 'Ciao come stai?',
+                status: 'received'
+              },
+              {
+                date: '20/03/2020 16:30:55',
+                message: 'Bene grazie! Stasera ci vediamo?',
+                status: 'sent'
+              },
+              {
+                date: '20/03/2020 16:35:00',
+                message: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                status: 'received'
+              }
+            ],
+        },
+        {
+            name: 'Clelia',
+            avatar: 'img/avatar_7.jpg',
+            visible: true,
+            colorActive: 'bgwhite',
+            messages: [
+              {
+                date: '28/03/2020 10:10:40',
+                message: 'La Marianna va in campagna',
+                status: 'received'
+              },
+              {
+                date: '28/03/2020 10:20:10',
+                message: 'Sicuro di non aver sbagliato chat?',
+                status: 'sent'
+              },
+              {
+                date: '28/03/2020 16:15:22',
+                message: 'Ah scusa!',
+                status: 'received'
+              }
+            ],
+        },
+        {
+            name: 'Alessio',
+            avatar: 'img/avatar_8.jpg',
+            visible: true,
+            colorActive: 'bgwhite',
+            messages: [
+              {
+                date: '10/01/2020 15:30:55',
+                message: 'Lo sai che ha aperto una nuova pizzeria?',
+                status: 'sent'
+              },
+              {
+                date: '10/01/2020 15:50:00',
+                message: 'Si, ma preferirei andare al cinema',
+                status: 'received'
+              }
+            ],
+        },
+      ],
+      indexCount: 0,
+      newMessage: "",
+      ultimoAccesso: dayjs().format("HH:mm:ss")
+    },
+    methods: {
+      indexActive: function(index) {
+        this.indexCount = index;
+      },
+      addMessage: function(indexCount) {
+        this.contacts[indexCount].messages.push(
+          {
+            date: dayjs().format("DD-MM-YYYY HH:mm:ss"),
+            message: this.newMessage,
+            status: 'sent'
+          }
+        );
+        this.newMessage = "";
+        setTimeout(() => {
+            this.contacts[indexCount].messages.push(
+              {
+                date: dayjs().format("DD-MM-YYYY HH:mm:ss"),
+                message: 'Ok',
+                status: 'received'
+              }
+            );
+        }, 2000);
       }
     }
-  );
-
-  $(".terza-sezione .fa-caret-up").click(
-    function() {
-      var divActive = $('.finto-carousel div.active');
-      var listActive = $('.terza-sezione .contenitore-sinistra ul li.activeBorderColor');
-      var anchorActive = $('.terza-sezione .contenitore-sinistra ul li a.activeColor');
-
-      $(divActive).removeClass("active");
-      $(listActive).removeClass("activeBorderColor");
-      $(anchorActive).removeClass("activeColor");
-
-      if (divActive.is('.first')) {
-        $('.finto-carousel div.last').addClass("active");
-        $('.terza-sezione .contenitore-sinistra ul li.last').addClass("activeBorderColor");
-        $('.terza-sezione .contenitore-sinistra ul li a.last').addClass("activeColor");
-      } else {
-        $(divActive).prev().addClass("active");
-        $(listActive).prev().addClass("activeBorderColor");
-        $(anchorActive).parent().prev().children().addClass("activeColor");
-      }
-    }
-  );
-
-  // Azioni primo carousel
-  $(".primo-carousel .fa-chevron-right").click(
-    function() {
-      var imgActive = $('.primo-carousel .box-img div.active');
-      var circleActive = $('.quarta-sezione .nav i.active');
-
-      $(imgActive).removeClass("active");
-      $(circleActive).removeClass("active fas");
-      $(circleActive).addClass("far");
-
-      if (imgActive.is('.last')) {
-        $('.primo-carousel .box-img div.first').addClass("active");
-        $('.quarta-sezione .nav i.first').removeClass("active far");
-        $('.quarta-sezione .nav i.first').addClass("active fas");
-      } else {
-        $(imgActive).next().addClass("active");
-        $(circleActive).next().removeClass("active far");
-        $(circleActive).next().addClass("active fas");
-      }
-    }
-  );
-
-  // $('html').keydown(function(evento){
-  //   if ((evento.which) == 39) {    //39 freccia destra
-  //     {
-  //       var imgActive = $('.primo-carousel .box-img div.active');
-  //       var circleActive = $('.quarta-sezione .nav i.active');
-  //
-  //       $(imgActive).removeClass("active");
-  //       $(circleActive).removeClass("active fas");
-  //       $(circleActive).addClass("far");
-  //
-  //       if (imgActive.is('.last')) {
-  //         $('.primo-carousel .box-img div.first').addClass("active");
-  //         $('.quarta-sezione .nav i.first').removeClass("active far");
-  //         $('.quarta-sezione .nav i.first').addClass("active fas");
-  //       } else {
-  //         $(imgActive).next().addClass("active");
-  //         $(circleActive).next().removeClass("active far");
-  //         $(circleActive).next().addClass("active fas");
-  //       }
-  //
-  //     }
-  //   }
-  // });
-
-  $(".primo-carousel .fa-chevron-left").click(
-    function() {
-      var imgActive = $('.primo-carousel .box-img div.active');
-      var circleActive = $('.quarta-sezione .nav i.active');
-
-      $(imgActive).removeClass("active");
-      $(circleActive).removeClass("active fas");
-      $(circleActive).addClass("far");
-
-      if (imgActive.is('.first')) {
-        $('.primo-carousel .box-img div.last').addClass("active");
-        $('.quarta-sezione .nav i.last').removeClass("active far");
-        $('.quarta-sezione .nav i.last').addClass("active fas");
-      } else {
-        $(imgActive).prev().addClass("active");
-        $(circleActive).prev().removeClass("active far");
-        $(circleActive).prev().addClass("active fas");
-      }
-    }
-  );
-
-  // $('html').keydown(function(evento){
-  //   if ((evento.which) == 37) {    //37 freccia sinistra
-  //     {
-  //       var imgActive = $('.primo-carousel .box-img div.active');
-  //       var circleActive = $('.quarta-sezione .nav i.active');
-  //
-  //       $(imgActive).removeClass("active");
-  //       $(circleActive).removeClass("active fas");
-  //       $(circleActive).addClass("far");
-  //
-  //       if (imgActive.is('.first')) {
-  //         $('.primo-carousel .box-img div.last').addClass("active");
-  //         $('.quarta-sezione .nav i.last').removeClass("active far");
-  //         $('.quarta-sezione .nav i.last').addClass("active fas");
-  //       } else {
-  //         $(imgActive).prev().addClass("active");
-  //         $(circleActive).prev().removeClass("active far");
-  //         $(circleActive).prev().addClass("active fas");
-  //       }
-  //     }
-  //   }
-  // });
-
-  // Azioni secondo carousel
-  $(".secondo-carousel .fa-chevron-right").click(
-    function() {
-      var imgActive = $('.settima-sezione div.active');
-      var circleActive = $('.settima-sezione .nav i.active');
-
-      $(imgActive).removeClass("active");
-      $(circleActive).removeClass("active fas");
-      $(circleActive).addClass("far");
-
-      if (imgActive.is('.last')) {
-        $('.settima-sezione div.first').addClass("active");
-        $('.settima-sezione .nav i.first').removeClass("active far");
-        $('.settima-sezione .nav i.first').addClass("active fas");
-      } else {
-        $(imgActive).next().addClass("active");
-        $(circleActive).next().removeClass("active far");
-        $(circleActive).next().addClass("active fas");
-      }
-    }
-  );
-
-  // $('html').keydown(function(evento){
-  //   if ((evento.which) == 39) {    //39 freccia destra
-  //     {
-  //       var imgActive = $('.secondo-carousel div.active');
-  //       var circleActive = $('.settima-sezione .nav i.active');
-  //
-  //       $(imgActive).removeClass("active");
-  //       $(circleActive).removeClass("active fas");
-  //       $(circleActive).addClass("far");
-  //
-  //       if (imgActive.is('.last')) {
-  //         $('.secondo-carousel div.first').addClass("active");
-  //         $('.settima-sezione .nav i.first').removeClass("active far");
-  //         $('.settima-sezione .nav i.first').addClass("active fas");
-  //       } else {
-  //         $(imgActive).next().addClass("active");
-  //         $(circleActive).next().removeClass("active far");
-  //         $(circleActive).next().addClass("active fas");
-  //       }
-  //
-  //     }
-  //   }
-  // });
-
-  $(".secondo-carousel .fa-chevron-left").click(
-    function() {
-      var imgActive = $('.secondo-carousel div.active');
-      var circleActive = $('.settima-sezione .nav i.active');
-
-      $(imgActive).removeClass("active");
-      $(circleActive).removeClass("active fas");
-      $(circleActive).addClass("far");
-
-      if (imgActive.is('.first')) {
-        $('.secondo-carousel div.last').addClass("active");
-        $('.settima-sezione .nav i.last').removeClass("active far");
-        $('.settima-sezione .nav i.last').addClass("active fas");
-      } else {
-        $(imgActive).prev().addClass("active");
-        $(circleActive).prev().removeClass("active far");
-        $(circleActive).prev().addClass("active fas");
-      }
-    }
-  );
-
-  // $('html').keydown(function(evento){
-  //   if ((evento.which) == 37) {    //37 freccia sinistra
-  //     {
-  //       var imgActive = $('.secondo-carousel div.active');
-  //       var circleActive = $('.settima-sezione .nav i.active');
-  //
-  //       $(imgActive).removeClass("active");
-  //       $(circleActive).removeClass("active fas");
-  //       $(circleActive).addClass("far");
-  //
-  //       if (imgActive.is('.first')) {
-  //         $('.secondo-carousel div.last').addClass("active");
-  //         $('.settima-sezione .nav i.last').removeClass("active far");
-  //         $('.settima-sezione .nav i.last').addClass("active fas");
-  //       } else {
-  //         $(imgActive).prev().addClass("active");
-  //         $(circleActive).prev().removeClass("active far");
-  //         $(circleActive).prev().addClass("active fas");
-  //       }
-  //     }
-  //   }
-  // });
-
-});
+  }
+);
