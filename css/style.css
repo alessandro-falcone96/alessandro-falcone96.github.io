@@ -2,255 +2,93 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
 }
-
-/* box centrale min-width: 950px; */
-
+/* Header */
 header{
-  background-color: #009688;
-  height: 15vh;
+  background-color: black;
+  height: 10vh;
 }
-footer{
-  background-color: #DBDBD2;
-  height: 85vh;
+header .containerHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+  margin: auto;
 }
-/* General */
-img{
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
+header img{
+  height: 70%;
 }
-
+header input{
+  padding: 5px;
+  width: 200px;
+}
+header button{
+  height: 29px;
+  padding: 2px 3px;
+}
 /* Main */
 main{
-  height: 90vh;
-  width: 80%;
-  margin: auto;
-  background-color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  border: 1px solid lightgrey;
+  background-color: #383838;
+  min-height: 90vh;
 }
-main #parte-sinistra{
-  width: 30%;
-  min-width: 200px;;
-  height: 100%;
-  background-color: white;
-  border-right: 1px solid lightgrey
-}
-main #parte-destra{
-  width: 70%;
-  height: 100%;
-}
-
-/* Parte Sinistra */
-/* Utente */
-#utente{
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  background-color: #EAEAEA;
-}
-#utente #foto-nome{
-  display: flex;
-  align-items: center;
-}
-#utente #foto-nome h3{
-  margin-left: 5px;
-}
-
-#utente #icone{
-  display: flex;
-  align-items: center;
-}
-#utente #icone i{
-  margin: 0px 5px;
-  color: #B1B1B1;
-}
-
-/* Banner Notifiche */
-#banner-notifiche{
-  height: 75px;
-  background-color: #8EDAFC;
-  display: flex;
-  align-items: center;
-}
-#banner-notifiche div:first-child{
-  background-color: white;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #8EDAFC;
-  margin: 0px 5px;
-}
-#banner-notifiche div:last-child h6{
-  color: grey;
-  text-decoration: underline;
-}
-
-
-/* Lista Chat */
-#container-chat{
-  height: calc(100% - 125px);
-  overflow: auto;
-}
-#container-chat #barra-ricerca{
+main .containerMain{
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 35px;
-  background-color: white;
-  border-bottom: 1px solid lightgrey;
-}
-#container-chat #barra-ricerca div{
-  width: 50px;
-  height: 80%;
-  color: #B1B1B1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 2px;
-  border: 1px solid #F0F0F0;
-}
-#container-chat #barra-ricerca input{
-  width: 80%;
-  height: 80%;
-  border-radius: 2px;
-  border: 1px solid #F0F0F0;
-}
-#container-chat #lista-chat{
-  background-color: white;
-}
-#container-chat #lista-chat div:not(.lastmessage){
-  display: flex;
-  height: 60px;
-  position: relative;
-}
-#container-chat #lista-chat div:hover{
-  background-color: #E8EBEB;
-}
-#container-chat #lista-chat div:not(:last-child){
-  border-bottom: 1px solid lightgrey;
-}
-#container-chat #lista-chat div img{
-  align-self: center;
-}
-#container-chat #lista-chat div .lastmessage{
-  margin-left: 10px;
-  align-self: center;
-}
-#container-chat #lista-chat div .lastmessage h6{
-margin-top: 5px;
-position: relative;
-}
-#container-chat #lista-chat div .lastmessage .secondaSpunta{
-  position: absolute;
-  top: 4px;
-  left: 4px;
-}
-#container-chat #lista-chat div .lastmessage h3 span{
-  position: absolute;
-  right: 0;
-  font-size: 10px;
-}
-i.fa-check{
-  color: #00f2ff;
-}
-#container-chat #lista-chat div .lastmessage h6 span.primoSpan{
-  margin-left: 8px;
+  flex-wrap: wrap;
+  padding: 50px 0px 100px 0px;
 }
 
-/* Parte Destra */
-#parte-destra #nome-selezionato{
-  height: 50px;
-  background-color: #EAEAEA;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-#parte-destra #nome-selezionato div:first-child{
-  display: flex;
-  align-items: center;
-  margin-left: 5px;
-}
-#parte-destra #nome-selezionato div:first-child h5{
-  color: grey;
-}
-#parte-destra #nome-selezionato div:last-child i{
-  margin: 0px 5px;
-  color: grey;
-}
-
-#parte-destra #chat-selezionata{
-  height: calc(100% - 100px);
-  background-image: url("../img/mine.jpg");
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: auto;
-}
-#parte-destra #chat-selezionata .container{
-  width: 80%;
-  height: 80%;
-}
-#parte-destra #chat-selezionata .container .box h6{
-  padding-top: 10px;
-  font-size: 10px;
-  color: grey;
-  text-align: right;
-  position: relative;
-}
-#parte-destra #chat-selezionata .container .box h6 .primoSpan{
-  margin-right: 5px;
-}
-#parte-destra #chat-selezionata .container .box h6 .secondaSpunta{
-  position: absolute;
-  bottom: 0px;
-  right: -5px;
-}
-.box{
-  min-height: 50px;
-  width: 40%;
-  border-radius: 10px;
-  padding: 10px 10px 5px 10px;
-}
-.green{
-  background-color: #D5F9BA;
-  margin: 5px 0px 5px auto;
-}
-.white{
-  background-color: white;
-  margin: 5px 0px;
-}
-.grey{
-  background-color: lightgrey;
-}
-
-#parte-destra #messaggio{
-  height: 50px;
-  background-color: #F3EEEA;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#parte-destra #messaggio div{
-  width: 10%;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: grey;
-}
-#parte-destra #messaggio input{
-  width: 80%;
-  height: 80%;
+main .containerMain .movieCard{
+  width: 250px;
+  height: 350px;
   border: 1px solid white;
-  border-radius: 3px;
+  margin: 10px 5px;
+  position: relative;
+}
+
+main .containerMain .movieCard img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .7s ease;
+}
+main .description{
+  color: white;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  overflow: auto;
+  transition: .7s ease;
+  padding: 10px;
+}
+.movieCard:hover img{
+  opacity: 0;
+}
+.movieCard:hover .description{
+  opacity: 1;
+}
+
+main .containerMain .movieCard .description h3{
+  font-weight: bold;
+  padding: 3px 0px;
+}
+main .containerMain .movieCard .description span{
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+/* Media Query */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+@media screen and (max-width: 767px) {
+
 }

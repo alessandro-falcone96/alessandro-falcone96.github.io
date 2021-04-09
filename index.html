@@ -4,120 +4,58 @@
     <meta charset="utf-8">
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <!-- Goole Font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <!-- Css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Title -->
-    <title>Vue BoolZapp</title>
+    <title>Vue Boolfix</title>
   </head>
   <body>
 
-    <header></header>
+    <div id="app" class="cont">
 
-    <main id="zapp">
-      <section id="parte-sinistra">
+      <header>
+        <div class="containerHeader">
 
-        <section id="utente">
-          <div id="foto-nome">
-            <img src="img/avatar_io.jpg" alt="">
-            <h3>Nome Utente</h3>
+          <img src="boolflix.png" alt="">
+
+          <div class="">
+
+            <input type="text" name="" value="" placeholder="Inserisci titolo" v-model="queryInput" @keyup.13="search">
+            <button type="button" name="button" @click="search">Cerca</button>
+
           </div>
 
-          <div id="icone">
-            <i class="fas fa-circle-notch fa-lg"></i>
-            <i class="fas fa-comment-alt fa-lg"></i>
-            <i class="fas fa-ellipsis-v fa-lg"></i>
-          </div>
-        </section>
+        </div>
+      </header>
 
-        <section id="banner-notifiche">
-          <div>
-            <i class="fas fa-bell-slash fa-lg"></i>
-          </div>
-          <div>
-            <h4>Ricevi notifiche di nuovi messaggi</h4>
-            <h6>Attiva notifiche desktop</h6>
-          </div>
+      <main>
 
-        </section>
+        <div class="containerMain">
 
-        <section id="container-chat">
-          <div id="barra-ricerca">
-            <div>
-              <i class="fas fa-search"></i>
+          <div class="movieCard" v-for="oggetto in film[0]">
+            <img :src="link + oggetto.poster_path" :alt="oggetto.original_title">
+
+            <div class="description">
+
+              <h3>Titolo: <span>{{oggetto.title}}</span></h3>
+              <h3>Titolo Originale: <span>{{oggetto.original_title}}</span></h3>
+              <h3>Voto: <span>{{oggetto.vote_average}}</span></h3>
+              <h3>Overview: <span>{{oggetto.overview}}</span></h3>
+
             </div>
 
-            <input type="text" v-model="search" placeholder="Cerca o inizia una nuova chat">
           </div>
 
-          <div id="lista-chat">
-            <div v-for="(item, index) in filteredContacts" v-on:click="indexActive(index)" :class="{ grey: index==indexCount }">
-              <img :src="item.avatar" alt="">
-              <div class="lastmessage">
-                <h3>{{item.name}}<span class="secondoSpan">{{item.messages[item.indexLast].date}}</span></h3>
-                <h6 v-if="item.messages[item.indexLast].status == 'sent'"><i class="fas fa-check primaSpunta"></i><i class="fas secondaSpunta fa-check"></i><span class="primoSpan">{{item.messages[item.indexLast].message}}</span> <br></h6>
-                <h6 v-else><span class="primoSpan">{{item.messages[item.indexLast].message}}</span></h6>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </section>
-
-      <section id="parte-destra">
-        <div id="nome-selezionato">
-          <div>
-            <img :src="contacts[indexCount].avatar" alt="">
-            <div>
-              <h4>{{contacts[indexCount].name}}</h4>
-              <h5>Ultimo accesso oggi alle {{contacts[indexCount].messages[contacts[indexCount].indexLast].date}}</h5>
-            </div>
-          </div>
-
-          <div>
-            <i class="fas fa-search fa-lg"></i>
-            <i class="fas fa-paperclip fa-lg"></i>
-            <i class="fas fa-ellipsis-v fa-lg"></i>
-          </div>
         </div>
 
-        <div id="chat-selezionata">
-          <div class="container">
+      </main>
 
-            <div class="box" v-for="(message, index) in contacts[indexCount].messages" :class="message.status == 'sent' ? 'green' : 'white'" >
-              {{message.message}}
+    </div>
 
-              <h6 v-if="message.status == 'sent'"><span class="primoSpan">{{message.date}}</span><i class="fas fa-check primaSpunta"></i><i class="fas secondaSpunta fa-check"></i> <br></h6>
-              <h6 v-else><span class="primoSpan">{{message.date}}</span></h6>
-
-            </div>
-
-          </div>
-        </div>
-
-        <div id="messaggio">
-          <div>
-            <i class="far fa-smile fa-lg"></i>
-          </div>
-
-          <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.13="addMessage(indexCount)">
-
-          <div>
-            <i class="fas fa-microphone fa-lg"></i>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <footer></footer>
-
-    <!-- day.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js" integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg==" crossorigin="anonymous"></script>
     <!-- Vue (Development Version) -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
     <!-- Js -->
     <script src="js/script.js" charset="utf-8"></script>
   </body>
