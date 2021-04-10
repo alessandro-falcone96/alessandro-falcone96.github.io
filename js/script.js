@@ -18,7 +18,7 @@ var app = new Vue (
         this.film = [];
         this.titoloPrincipale = "Titoli filtrati per '" + this.queryInput + "'";
         {
-          axios.get('https://api.themoviedb.org/3/search/movie', {
+          axios.get('https://api.themoviedb.org/3/search/multi', {
             params: {
               api_key: "d1f8d7650c9da069b8dc77f3607078db",
               query: this.queryInput,

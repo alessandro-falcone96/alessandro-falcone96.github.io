@@ -19,14 +19,27 @@ header .containerHeader{
 header img{
   height: 70%;
 }
-header input{
+header input:not(.scelta input){
   padding: 5px;
   width: 200px;
 }
 header button{
-  height: 29px;
+  height: 36px;
   padding: 2px 3px;
 }
+
+/* prova radiocheck */
+header .containerHeader div:not(.scelta){
+  display: flex;
+}
+.scelta{
+  color: white;
+  padding: 0px 25px;
+}
+
+
+
+
 /* Main */
 main{
   background-color: #383838;
