@@ -35,7 +35,8 @@
         <div class="containerMain">
 
           <div class="movieCard" v-for="oggetto in film[0]">
-            <img class="poster" :src="link + oggetto.poster_path" :alt="oggetto.original_title">
+            <img class="poster fake" v-if="oggetto.poster_path == null" src="nonDisponibile.png">
+            <img class="poster" v-else :src="link + oggetto.poster_path" :alt="oggetto.original_title">
 
             <div class="description">
 
