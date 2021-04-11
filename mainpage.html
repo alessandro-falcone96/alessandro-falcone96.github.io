@@ -10,58 +10,72 @@
     <!-- Css -->
     <link rel="stylesheet" href="css/styleMainPage.css">
     <!-- Title -->
-    <title>Vue Boolfix Main Page</title>
+    <title>Vue Boolfix</title>
   </head>
   <body>
 
-    <header>
-      <div class="containerHeader">
+    <div id="app" class="cont">
 
-        <img src="boolflix.png" alt="">
+      <header>
+        <div class="containerHeader">
 
-      </div>
-    </header>
-
-    <main>
-
-      <div class="containerCentrale">
-
-        <h1>Chi vuole guardare Boolflix?</h1>
-
-        <div class="containerProfili">
+          <img src="boolflix.png" alt="">
 
           <div>
-            <a href="index.html"><img src="img/profiloPaolo.png" alt=""></a>
-            <h4>Paolo</h4>
+
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Serie TV</a></li>
+              <li><a href="#">Film</a></li>
+              <li><a href="#">Nuovi e Popolari</a></li>
+              <li><a href="#">La mia Lista</a></li>
+            </ul>
+
           </div>
+
           <div>
-            <a href="index.html"><img src="img/profiloPatrizia.png" alt=""></a>
-            <h4>Patrizia</h4>
+
+            <input type="text" name="" value="" placeholder="Inserisci titolo" v-model="queryInput" @keyup.13="search">
+
+            <button type="button" name="button" @click="search">Cerca</button>
+
           </div>
-          <div>
-            <a href="index.html"><img src="img/profiloAlessandro.png" alt=""></a>
-            <h4>Alessandro</h4>
-          </div>
-          <div>
-            <a href="index.html"><img src="img/profiloLello.png" alt=""></a>
-            <h4>Lello</h4>
-          </div>
-          <div>
-            <a href="index.html"><img src="img/profiloClara.png" alt=""></a>
-            <h4>Clara</h4>
+
+        </div>
+      </header>
+
+      <main>
+
+        <h1>{{titoloPrincipale}}</h1>
+
+        <div class="containerMain">
+
+          <div class="movieCard" v-for="oggetto in film[0]">
+            <img class="poster fake" v-if="oggetto.poster_path == null" src="nonDisponibile.png">
+            <img class="poster" v-else :src="link + oggetto.poster_path" :alt="oggetto.original_title">
+
+            <div class="description">
+
+              <h3><u>Title</u>: <span>{{oggetto.title}} {{oggetto.name}}</span></h3>
+              <h3><u>Original Title</u>: <span>{{oggetto.original_title}} {{oggetto.original_name}}</span></h3>
+              <div class="len-flag">
+                <h3><u>Language</u>: {{oggetto.original_language}}</h3>
+                <img v-if="oggetto.original_language == 'en'" class="bandiera" :src="flagLink + 'US' + flagLink2" alt="">
+                <img v-else class="bandiera" :src="flagLink + oggetto.original_language + flagLink2" alt="">
+              </div>
+              <h3><u>Vote</u>: <span v-for="n in oggetto.vote_average"><i class="fas fa-star"></i></span><span v-for="n in (5 - oggetto.vote_average)"><i class="far fa-star"></i></span></h3>
+              <h3><u>Type</u>: <span>{{oggetto.media_type}}</span></h3>
+              <h3><u>Overview</u>: <span>{{oggetto.overview}}</span></h3>
+
+            </div>
+
           </div>
 
         </div>
 
-        <div class="containerButton">
+      </main>
 
-          <button type="button">Gestisci i profili</button>
-
-        </div>
-
-      </div>
-
-    </main>
+    </div>
 
     <!-- Vue (Development Version) -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>

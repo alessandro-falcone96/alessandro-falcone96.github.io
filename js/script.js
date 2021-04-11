@@ -1,5 +1,3 @@
-
-
 var app = new Vue (
   {
     el: "#app",
@@ -49,5 +47,30 @@ var app = new Vue (
 
       }
     },
+  }
+);
+
+var app2 = new Vue (
+  {
+    el: "#app2",
+    data: {
+      fotoProfilo: [
+        "img/profiloPaolo.png",
+        "img/profiloPatrizia.png",
+        "img/profiloAlessandro.png",
+        "img/profiloLello.png",
+        "img/profiloClara.png"
+      ],
+      nomiProfilo: [
+        "Paolo",
+        "Patrizia",
+        "Alessandro",
+        "Lello",
+        "Clara"
+      ]
+    },
+    methods: {
+
+    }
   }
 );
