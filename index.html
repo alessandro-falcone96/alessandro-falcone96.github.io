@@ -7,6 +7,8 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico"/>
     <!-- Css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Title -->
@@ -31,30 +33,9 @@
         <div class="containerProfili">
 
           <div v-for="(item, index) in fotoProfilo">
-            <a href="mainpage.html"><img :src="item" alt=""></a>
+            <a href="mainpage.html"><img :src="item" alt="" @click="activeImage(index)"></a>
             <h4>{{nomiProfilo[index]}}</h4>
           </div>
-
-          <!-- <div>
-            <a href="index.html"><img src="img/profiloPaolo.png" alt=""></a>
-            <h4>Paolo</h4>
-          </div>
-          <div>
-            <a href="index.html"><img src="img/profiloPatrizia.png" alt=""></a>
-            <h4>Patrizia</h4>
-          </div>
-          <div>
-            <a href="index.html"><img src="img/profiloAlessandro.png" alt=""></a>
-            <h4>Alessandro</h4>
-          </div>
-          <div>
-            <a href="index.html"><img src="img/profiloLello.png" alt=""></a>
-            <h4>Lello</h4>
-          </div>
-          <div>
-            <a href="index.html"><img src="img/profiloClara.png" alt=""></a>
-            <h4>Clara</h4>
-          </div> -->
 
         </div>
 
