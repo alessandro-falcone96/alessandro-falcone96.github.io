@@ -126,15 +126,47 @@ main #add{
 /* Media Query */
 @media only screen and (min-width: 360px) and (orientation: portrait) {
   header{
-    height: 15vh;
+    height: 18vh;
   }
-  header img{
-    height: 70%;
+  header .containerHeader{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
   }
-  header ul li{
-    display: block;
+  header #logo{
+    order: 1;
+    width: 40%;
+    height: 60%;
+  }
+  header #menu{
+    order: 3;
+    width: 100%;
+  }
+  header ul li a{
+    font-size: 20px;
+  }
+  header #ricerca{
+    order: 2;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  header input{
+    font-size: 35px;
+    width: 100%;
+    margin-top: 5px;
+  }
+  header button{
+    font-size: 25px;
+    padding: 5px;
+    height: 45px;
+    margin-top: 5px;
   }
   main{
     min-height: 85vh;
+  }
+  main h1{
+    font-size: 50px;
   }
 }
