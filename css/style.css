@@ -11,7 +11,6 @@ header{
 }
 header .containerHeader{
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 95%;
   height: 100%;
@@ -89,6 +88,9 @@ main button:hover{
   header{
     height: 18vh;
   }
+  header .containerHeader{
+    justify-content: center;
+  }
   main{
     min-height: 85vh;
   }
@@ -97,5 +99,8 @@ main button:hover{
   }
   main img{
     height: 350px;
+  }
+  main h4{
+    font-size: 50px;
   }
 }

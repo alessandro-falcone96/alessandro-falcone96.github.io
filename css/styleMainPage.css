@@ -135,15 +135,19 @@ main #add{
   }
   header #logo{
     order: 1;
-    width: 40%;
+    width: 60%;
     height: 60%;
+  }
+  header #logo img{
+    height: 100%;
+    width: 100%;
   }
   header #menu{
     order: 3;
     width: 100%;
   }
   header ul li a{
-    font-size: 20px;
+    font-size: 40px;
   }
   header #ricerca{
     order: 2;
