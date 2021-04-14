@@ -126,7 +126,7 @@ main #add{
 /* Media Query */
 @media only screen and (min-width: 360px) and (orientation: portrait) {
   header{
-    height: 18vh;
+    min-height: 18vh;
   }
   header .containerHeader{
     flex-wrap: wrap;
