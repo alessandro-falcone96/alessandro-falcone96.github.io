@@ -1,0 +1,104 @@
+@media only screen and (max-width: 767px) {
+
+  // Header
+  #containerMainPage header{
+
+      & .headerTop{
+        height: 200px;
+      }
+
+      & .menu{
+
+        & .headerMenu{
+          height: 200px;
+        }
+
+        & ul li{
+          padding: 45px 0px;
+          font-size: $fontMedioGrande;
+        }
+      }
+
+      & .headerCenter{
+
+        & h1{
+          font-size: $fontMedioGrande;
+        }
+
+        & h4{
+          font-size: $fontMedio;
+          width: 90%;
+          margin: auto;
+        }
+      }
+  }
+
+  // Main
+  #containerMainPage .secondaSezione{
+    // background-color: yellow;
+
+    & .containerNews{
+      width: 90%;
+      display: block;
+
+      & .containerSinistra{
+        width: 100%;
+
+        & div{
+
+          & h3{
+            font-size: $fontMedio;
+          }
+
+          & p{
+            font-size: $fontMedio;
+          }
+
+          &.guitarWeeps, &.soundsBetter {
+            width: 100%;
+          }
+        }
+      }
+
+      & .containerDestra{
+        width: 100%;
+
+        & div{
+
+          & h3{
+            font-size: $fontMedio;
+          }
+
+          & p{
+            font-size: $fontMedio;
+          }
+        }
+
+      }
+    }
+  }
+
+  #containerMainPage .terzaSezione, #containerMainPage .sestaSezione{
+    & h4{
+      font-size: $fontMedio;
+    }
+  }
+
+  #containerMainPage .quartaSezione{
+    height: 100vh;
+
+    & div{
+      width: 90%;
+
+      & p{
+        font-size: $fontMedioGrande;
+        line-height: 80px;
+      }
+    }
+  }
+
+  #containerMainPage .quintaSezione{
+
+  }
+
+}

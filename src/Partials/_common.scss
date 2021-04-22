@@ -172,9 +172,6 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
-
   }
 
   & .footerBottom{
@@ -231,5 +228,72 @@ footer{
     &:hover{
       background-color: $coloreRossiccio;
     }
+  }
+}
+
+// Media Query
+@media only screen and (max-width: 767px) {
+  .contenuto{
+    width: 90%;
+
+    & p{
+      font-size: $fontMedio;
+      line-height: 55px;
+    }
+  }
+
+  hr{
+    width: 90%;
+  }
+
+  .containerDate{
+
+    & ul li{
+      font-size: $fontMedio;
+    }
+
+    & .containerLuogoConcerto{
+      flex-wrap: wrap;
+
+      & img{
+        padding-top: 25px;
+        margin: auto;
+      }
+
+      & div{
+        width: 100%;
+
+        & h4{
+          padding: 30px 0px;
+        }
+      }
+    }
+  }
+
+  footer{
+
+    & .footerTop{
+      flex-wrap: wrap;
+      justify-content: center;
+
+      & ul{
+        width: 100%;
+        text-align: center;
+
+        & li{
+          font-size: $fontMedio;
+          padding: 10px 0px;
+        }
+      }
+    }
+
+    & .footerBottom{
+      flex-wrap: wrap;
+      & ul{
+        width: 100%;
+        text-align: center;
+      }
+    }
+
   }
 }
