@@ -2,166 +2,222 @@ var app = new Vue (
   {
     el: "#app",
     data: {
-      film: [],
-      filteredFilm: [],
-      menu: [
+
+      // General
+      listaMenu: [
         {
           name: "Home",
-          isActive: "true",
-          categorySearch: "multi",
-          queryInitial: "Harry Potter"
+          isVisible: true
         },
         {
-          name: "Serie TV",
-          isActive: "false",
-          categorySearch: "tv",
-          queryInitial: "Game of Thrones"
+          name: "Meet The Band",
+          isVisible: false
         },
         {
-          name: "Film",
-          isActive: "false",
-          categorySearch: "movie",
-          queryInitial: "Avengers"
+          name: "Live Dates",
+          isVisible: false
         },
         {
-          name: "Nuovi e Popolari",
-          isActive: "false"
+          name: "Latest News",
+          isVisible: false
         },
         {
-          name: "La mia Lista",
-          isActive: "false"
+          name: "Albums",
+          isVisible: false
+        },
+        {
+          name: "Fans",
+          isVisible: false
+        },
+      ],
+      listaFooterTop: [
+        "Home",
+        "Meet The Band",
+        "Live Dates",
+        "Latest News",
+        "Albums",
+        "Fans"
+      ],
+      listaFooterBottom: [
+        "© Copyright 2012-2020",
+        "AVADA THEME BY THEMEFUSION",
+        "ALL RIGHTS RESERVED",
+        "POWERED BY WORDPRESS",
+      ],
+      listaIconeSocial: [
+        "fa-facebook-f",
+        "fa-twitter",
+        "fa-instagram",
+        "fa-youtube"
+      ],
+      isMenuActive: false,
+      indexLastActive: 0,
+
+      // Main Page
+      listaDate: [
+        {
+          data: "17/08/2020 GEM FESTIVAL 2020 ANAKLIA, GEORIGA",
+          isActive: false
+        },
+        {
+          data: "24/09/2020 GROOVEFEST DOMINICAL REPUBLIC",
+          isActive: false
+        },
+        {
+          data: "31/10/2020 OASIS FESTIVAL 2020 MARRAKECH, MOROCCO",
+          isActive: false
+        },
+        {
+          data: "07/11/2020 MOGA FESTIVAL - ESSAOURIA, MOROCCO",
+          isActive: false
+        },
+        {
+          data: "10/12/202 ENVISION FESTIVAL - UVITA, COSTA RICA",
+          isActive: false
+        },
+      ],
+
+      // Live Dates
+      listaDateLiveDates: [
+        {
+          data: "17/08/2020 GEM FESTIVAL 2020 ANAKLIA, GEORIGA",
+          isActive: false
+        },
+        {
+          data: "24/09/2020 GROOVEFEST DOMINICAL REPUBLIC",
+          isActive: false
+        },
+        {
+          data: "31/10/2020 OASIS FESTIVAL 2020 MARRAKECH, MOROCCO",
+          isActive: false
+        },
+        {
+          data: "07/11/2020 MOGA FESTIVAL - ESSAOURIA, MOROCCO",
+          isActive: false
+        },
+        {
+          data: "10/12/202 ENVISION FESTIVAL - UVITA, COSTA RICA",
+          isActive: false
+        },
+        {
+          data: "15/01/2021 JAZZ MUSICAL FESTIVAL - SAN JOSE, CALIFORNI",
+          isActive: false
+        },
+        {
+          data: "17/02/2021 FOLK FESTIVAL, PHILADELPHIA",
+          isActive: false
+        },
+        {
+          data: "07/03/2021 CMA FEST IN NASHVILLE, TENNESSE",
+          isActive: false
+        },
+        {
+          data: "10/04/2021 THE GOVERNORS BALL MUSICAL FESTIVAL, NEW YORK",
+          isActive: false
+        },
+        {
+          data: "18/05/2021 ROSKIDE - ROSKIDE, DENMARK",
+          isActive: false
+        },
+        {
+          data: "22/06/2021 SPLENDOUR IN THE GRASS - NEW SOUTH WALES, AUSTRALIA",
+          isActive: false
+        },
+        {
+          data: "28/07/2021 LOLLAPLOOZA - CHICAGO",
+          isActive: false
+        },
+        {
+          data: "28/08/2021 OSHEAGA - MONTREAL",
+          isActive: false
+        },
+        {
+          data: "01/09/2021 MONTREUX JAZZ FESTIVAL - SWITZERLAND",
+          isActive: false
         }
       ],
-      lista: [],
-      lastIndex: 0,
-      indexActive: 0,
-      link: "https://image.tmdb.org/t/p/original/",
-      queryInput: "",
-      titoloPrincipale: "",
-      flagLink: "https://www.countryflags.io/",
-      flagLink2: "/shiny/32.png",
-      fotoProfilo: [
-        "img/profiloPaolo.png",
-        "img/profiloPatrizia.png",
-        "img/profiloAlessandro.png",
-        "img/profiloLello.png",
-        "img/profiloClara.png"
+
+      // Meet The Band
+      listaProfili: [
+        {
+          foto: "img/meetTheBand/team1.jpg",
+          nome: "JOHN",
+        },
+        {
+          foto: "img/meetTheBand/team2.jpg",
+          nome: "PAUL",
+        },
+        {
+          foto: "img/meetTheBand/team3.jpg",
+          nome: "SILVIA",
+        },
+        {
+          foto: "img/meetTheBand/team4.jpg",
+          nome: "KATURO",
+        },
       ],
-      nomiProfilo: [
-        "Paolo",
-        "Patrizia",
-        "Alessandro",
-        "Lello",
-        "Clara"
+      listaFoto: [
+        "img/general/about-gallery1.jpg",
+        "img/general/about-gallery2.jpg",
+        "img/general/about-gallery3.jpg",
+        "img/general/about-gallery4.jpg"
       ],
-      fotoActive: 0,
-      isIndexVisible: true,
-      isMainPageVisible: false,
-      isInputSearchVisible: false
-    },
-    mounted: function() {
-      this.searchDatabaseBasic(0);
+
+      // Albums
+      listaAlbums: [
+        {
+          title: "CHARLES MANSON (BUON NATALE2) [feat. Lazza]",
+          link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716459959&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+        },
+        {
+          title: "CABRIOLET (Live) [feat. Sfera Ebbasta]",
+          link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/715430701&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+        },
+        {
+          title: "STAI ZITTO (Live) [feat. Fabri Fibra]",
+          link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/715430518&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+        },
+        {
+          title: "IL CIELO NELLA STANZA (Live) [feat. NSTASIA]",
+          link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/715430479&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+        },
+        {
+          title: "PERDONAMI (Live)",
+          link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/715430251&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+        },
+      ],
+
     },
     methods: {
-      searchDatabaseBasic: function(index) {
-        this.film = [];
-        this.titoloPrincipale = this.menu[index].name;
-
-        axios.get('https://api.themoviedb.org/3/search/' + this.menu[index].categorySearch, {
-          params: {
-            api_key: "d1f8d7650c9da069b8dc77f3607078db",
-            query: this.menu[index].queryInitial
-          }
-        })
-        .then((risposta) => {
-          var oggetto = risposta.data.results;
-          this.transformVote(oggetto);
-          return (oggetto);
-        })
-        this.queryInput = "";
-      },
-      searchDatabaseAdvance: function() {
-        this.film = [];
-        this.titoloPrincipale = "Titoli filtrati per '" + this.queryInput + "'";
-          axios.get('https://api.themoviedb.org/3/search/' + this.menu[this.indexActive].categorySearch, {
-            params: {
-              api_key: "d1f8d7650c9da069b8dc77f3607078db",
-              query: this.queryInput
-            }
-          })
-          .then((risposta) => {
-            var oggetto = risposta.data.results;
-            this.transformVote(oggetto);
-            return (oggetto);
-          })
-          this.queryInput = "";
-      },
-      change: function(index) {
-
-        // Aggiorno gli Index
-        this.menu[this.lastIndex].isActive = 'false';
-        this.lastIndex = index;
-        this.menu[index].isActive = 'true';
-        this.indexActive = index;
-
-        // Aggiorno i film a schermo
-        if (this.menu[index].name == 'Home') {
-          this.searchDatabaseBasic(index);
-        } else if (this.menu[index].name == 'Serie TV') {
-          this.searchDatabaseBasic(index);
-        } else if (this.menu[index].name == 'Film') {
-          this.searchDatabaseBasic(index);
-        } else if (this.menu[index].name == 'La mia Lista') {
-          this.film = [];
-          this.titoloPrincipale = "La mia Lista";
-          this.film.push(this.lista);
-        }
-
-      },
-      toLista: function(film) {
-        if (this.lista.includes(film) == false) {
-          this.lista.push(film);
-        }
-      },
-      remove: function(film, index) {
-        this.lista.splice(index, 1);
-      },
-      isVisible: function(index) {
-        if (this.isIndexVisible == true) {
-          this.isIndexVisible = false;
+      changeActiveIndexMainPage: function(index) {
+        if (this.listaDate[index].isActive == true) {
+          this.listaDate[index].isActive = false;
         } else {
-          this.isIndexVisible = true;
+          this.listaDate[this.indexLastActive].isActive = false;
+          this.listaDate[index].isActive = true;
+          this.indexLastActive = index;
         }
-        if (this.isMainPageVisible == true) {
-          this.isMainPageVisible = false;
-        } else {
-          this.isMainPageVisible = true;
-        }
-        this.fotoActive = index;
       },
-      transformVote: function(oggetto) {
-        this.film.push(oggetto);
-
-        // Trasformazione voto da 10 a 5
-        let voto = null;
-        for (var index = 0; index < oggetto.length; index++) {
-          voto = oggetto[index].vote_average;
-          let newVoto = voto / 2;
-          let decimale = newVoto % 1;
-          newVoto = Math.floor(newVoto);
-          if (decimale > 0.5) {
-            newVoto += 1;
-          }
-          oggetto[index].vote_average = newVoto;
-        }
-        return oggetto;
-      },
-      iconaRicercaVisible: function() {
-        if (this.isInputSearchVisible == true) {
-          this.isInputSearchVisible = false;
+      changeActiveIndexLiveDates: function(index) {
+        if (this.listaDateLiveDates[index].isActive == true) {
+          this.listaDateLiveDates[index].isActive = false;
         } else {
-          this.isInputSearchVisible = true;
+          this.listaDateLiveDates[this.indexLastActive].isActive = false;
+          this.listaDateLiveDates[index].isActive = true;
+          this.indexLastActive = index;
         }
+      },
+      changeMenuActive: function() {
+        if (this.isMenuActive == false) {
+          this.isMenuActive = true;
+        } else {
+          this.isMenuActive = false;
+        }
+      },
+      changePage: function(index) {
+        this.listaMenu[this.indexLastActive].isVisible = false;
+        this.indexLastActive = index;
+        this.listaMenu[index].isVisible = true;
       }
     }
   }

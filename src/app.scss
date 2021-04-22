@@ -1,0 +1,26 @@
+@import "Partials/_variables.scss";
+@import "Partials/common.scss";
+
+// Main Page
+@import "Partials/mainPage/header.scss";
+@import "Partials/mainPage/main.scss";
+
+// Live Dates
+@import "Partials/liveDates/header.scss";
+@import "Partials/liveDates/main.scss";
+
+// Meet The Band
+@import "Partials/meetTheBand/header.scss";
+@import "Partials/meetTheBand/main.scss";
+
+// Latest News
+@import "Partials/latestNews/header.scss";
+@import "Partials/latestNews/main.scss";
+
+// Albums
+@import "Partials/albums/header.scss";
+@import "Partials/albums/main.scss";
+
+// Fans
+@import "Partials/fans/header.scss";
+@import "Partials/fans/main.scss";

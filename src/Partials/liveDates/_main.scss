@@ -1,0 +1,123 @@
+#containerLiveDates .primaSezione{
+  background-color: $coloreGrigioChiaro;
+
+  & .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    // border: 1px solid blue;
+    padding: 75px 0px;
+
+    & img{
+      width: 48%;
+      // border: 1px solid green;
+    }
+
+    & .containerDescrizione{
+      width: 48%;
+      // border: 1px solid green;
+
+      & h2{
+        text-align: center;
+      }
+
+      & hr{
+        width: 50%;
+        margin-left: 0;
+      }
+
+      & p{
+        margin-top: 35px;
+
+        &.descrizione{
+          line-height: 25px;
+          text-align: justify;
+        }
+
+        & i{
+          color: white;
+          margin-right: 15px;
+
+          &.secondStar{
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#containerLiveDates .secondaSezione{
+  background-color: $coloreGrigioScuro;
+  padding: 150px 0px;
+}
+
+#containerLiveDates .terzaSezione{
+  height: 60vh;
+  // border: 1px solid orange;
+  background-image: url("../img/liveDates/live_date_parallax_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  & div{
+    // border: 1px solid white;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    & p{
+      color: white;
+      font-size: $fontMedio;
+      line-height: 55px;
+      text-align: center;
+      font-style: italic;
+      font-family: 'Merriweather', serif;
+    }
+
+    & span{
+      padding-top: 30px;
+
+      & i{
+        color: white;
+      }
+    }
+  }
+}
+
+#containerLiveDates .quartaSezione{
+  background-color: $coloreRossiccio;
+  color: white;
+  text-align: center;
+  padding: 75px 0px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+
+  &:hover{
+    background-color: white;
+    transition: all .3s ease-in-out;
+  }
+  &:hover a{
+    color: black;
+  }
+
+  & h4{
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'PT Sans', sans-serif;
+
+    & a{
+      color: white;
+      text-decoration: none;
+    }
+  }
+}

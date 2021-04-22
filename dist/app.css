@@ -1,0 +1,1582 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 20px;
+  color: white;
+  background-color: inherit;
+  border: 1px solid white;
+  text-transform: uppercase;
+  margin: 0px 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: "PT Sans", sans-serif;
+}
+
+.btn:hover {
+  color: black;
+  border: 1px solid black;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.btnRosso {
+  border: 1px solid #805876;
+  background-color: #805876;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+p, a {
+  color: #7D7C8D;
+}
+
+h2 {
+  color: white;
+  font-size: 60px;
+  letter-spacing: 2px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+  color: #805876;
+}
+
+.contenuto {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+}
+.contenuto p {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  font-size: 20px;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+}
+
+hr {
+  width: 25%;
+  margin: 15px auto 15px auto;
+  border: 1px solid #7D7C8D;
+}
+
+.bordoSpesso {
+  width: 40%;
+  margin: auto;
+  height: 15px;
+  background-color: #805876;
+}
+
+.containerDate {
+  width: 90%;
+  margin: auto;
+}
+.containerDate ul li {
+  display: block;
+  color: #805876;
+  background-color: #323944;
+  padding: 20px 0px;
+  margin: 10px 0px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+.containerDate ul li i {
+  color: white;
+  padding: 8px;
+  margin: 0px 15px;
+  transition: 0.5s;
+}
+.containerDate ul li:hover {
+  background-color: #373E4A;
+}
+.containerDate ul li:hover i {
+  background-color: #805876;
+  transition: 0.5s;
+}
+.containerDate ul li .containerLuogoConcerto {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 15px 0px;
+}
+.containerDate ul li .containerLuogoConcerto img {
+  height: 200px;
+  width: 300px;
+}
+.containerDate ul li .containerLuogoConcerto div {
+  margin-left: 45px;
+}
+.containerDate ul li .containerLuogoConcerto div h4 {
+  color: white;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+.containerDate ul li .containerLuogoConcerto div p {
+  padding: 15px 0px;
+  line-height: 25px;
+  font-family: "Merriweather", serif;
+}
+
+footer {
+  height: 35vh;
+  background-color: red;
+}
+footer ul li :hover {
+  color: white;
+}
+footer ul li a {
+  padding: 0px 10px;
+  font-weight: 400;
+  font-family: "Merriweather", serif;
+}
+footer .footerTop {
+  height: 23vh;
+  background-color: #323944;
+  padding-left: 30px;
+  padding-right: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footerBottom {
+  height: 18vh;
+  background-color: #252B33;
+  padding-left: 30px;
+  padding-right: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footerBottom ul:first-child li a {
+  font-size: 10px;
+  font-weight: 400;
+  border-right: 1px solid #7D7C8D;
+}
+footer .footerBottom ul:first-child li:last-child a {
+  border: none;
+}
+footer .footerBottom ul:last-child li {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 5px;
+  background-color: #323944;
+}
+footer div:last-child {
+  width: 50px;
+  background-color: #323233;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  right: 75px;
+  border-radius: 5px;
+  z-index: 10;
+}
+footer div:last-child i {
+  padding: 5px;
+}
+footer div:last-child i:hover {
+  color: white;
+}
+footer div:last-child:hover {
+  background-color: #805876;
+}
+
+#containerMainPage header {
+  height: 100vh;
+  background-image: url("../img/mainPage/home_slider.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+#containerMainPage header .headerTop {
+  height: 100px;
+  display: flex;
+  padding: 20px 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(37, 43, 51, 0.7);
+}
+#containerMainPage header .headerTop img, #containerMainPage header .headerTop i {
+  cursor: pointer;
+}
+#containerMainPage header .menu {
+  height: 100vh;
+  width: 100%;
+  background-color: #805876;
+  position: fixed;
+  z-index: 10;
+}
+#containerMainPage header .menu .headerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 50px;
+}
+#containerMainPage header .menu .headerMenu i {
+  cursor: pointer;
+  color: #aeaeaf;
+}
+#containerMainPage header .menu .headerMenu i:hover {
+  color: white;
+}
+#containerMainPage header .menu ul li {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  padding: 35px 0px;
+}
+#containerMainPage header .menu ul li a {
+  color: #aeaeaf;
+  font-family: "Montserrat", sans-serif;
+}
+#containerMainPage header .menu ul li a:hover {
+  color: white;
+}
+#containerMainPage header .headerCenter {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#containerMainPage header .headerCenter h1 {
+  font-size: 150px;
+  letter-spacing: 5px;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+}
+#containerMainPage header .headerCenter h4 {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  padding: 50px 0px 50px 0px;
+  font-family: "Merriweather", serif;
+}
+
+#containerMainPage .primaSezione {
+  background-color: #323944;
+}
+
+#containerMainPage .secondaSezione {
+  background-color: #252B33;
+  padding-bottom: 100px;
+}
+#containerMainPage .secondaSezione .containerNews {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0px auto 0px auto;
+}
+#containerMainPage .secondaSezione .containerNews .containerSinistra {
+  width: 66%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#containerMainPage .secondaSezione .containerNews .containerSinistra div {
+  background-color: #323944;
+  border: 1px solid #323944;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+#containerMainPage .secondaSezione .containerNews .containerSinistra div .container {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.5s ease-in-out;
+  transform: scaleY(1);
+  z-index: 1;
+}
+#containerMainPage .secondaSezione .containerNews .containerSinistra div:hover .container {
+  transform: translateY(100%);
+  transition: all 0.5s ease-in-out;
+}
+#containerMainPage .secondaSezione .containerNews .containerSinistra div.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(-100%);
+  background-color: rgba(236, 72, 87, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+#containerMainPage .secondaSezione .containerNews .containerSinistra div.overlay h3.overlayTitle {
+  padding: 0;
+  color: white;
+}
+#containerMainPage .secondaSezione .containerNews .containerSinistra div:hover .overlay {
+  transition: all 0.5s ease-in-out;
+  transform: translateX(0);
+}
+#containerMainPage .secondaSezione .containerNews .containerSinistra div.technologyMusic, #containerMainPage .secondaSezione .containerNews .containerSinistra div.rockFlavour {
+  width: 100%;
+}
+#containerMainPage .secondaSezione .containerNews .containerSinistra div.technologyMusic img, #containerMainPage .secondaSezione .containerNews .containerSinistra div.rockFlavour img {
+  width: 100%;
+  height: 100%;
+}
+#containerMainPage .secondaSezione .containerNews .containerSinistra div.guitarWeeps, #containerMainPage .secondaSezione .containerNews .containerSinistra div.soundsBetter {
+  width: 48%;
+  margin: 35px 0px;
+}
+#containerMainPage .secondaSezione .containerNews .containerSinistra div.guitarWeeps img, #containerMainPage .secondaSezione .containerNews .containerSinistra div.soundsBetter img {
+  width: 100%;
+  height: 100%;
+}
+#containerMainPage .secondaSezione .containerNews .containerDestra {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#containerMainPage .secondaSezione .containerNews .containerDestra div.oldSchool, #containerMainPage .secondaSezione .containerNews .containerDestra div.stageLegend {
+  border: 1px solid #323944;
+  padding-bottom: 25px;
+  cursor: pointer;
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+}
+#containerMainPage .secondaSezione .containerNews .containerDestra div.oldSchool .container, #containerMainPage .secondaSezione .containerNews .containerDestra div.stageLegend .container {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #323944;
+  transition: all 0.5s ease-in-out;
+  transform: scaleY(1);
+  z-index: 1;
+}
+#containerMainPage .secondaSezione .containerNews .containerDestra div.oldSchool:hover .container, #containerMainPage .secondaSezione .containerNews .containerDestra div.stageLegend:hover .container {
+  transform: translateY(100%);
+  transition: all 0.5s ease-in-out;
+}
+#containerMainPage .secondaSezione .containerNews .containerDestra div.oldSchool .overlay, #containerMainPage .secondaSezione .containerNews .containerDestra div.stageLegend .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(-100%);
+  background-color: rgba(236, 72, 87, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+#containerMainPage .secondaSezione .containerNews .containerDestra div.oldSchool .overlay h3.overlayTitle, #containerMainPage .secondaSezione .containerNews .containerDestra div.stageLegend .overlay h3.overlayTitle {
+  padding: 0;
+  color: white;
+}
+#containerMainPage .secondaSezione .containerNews .containerDestra div.oldSchool:hover .overlay, #containerMainPage .secondaSezione .containerNews .containerDestra div.stageLegend:hover .overlay {
+  transition: all 0.5s ease-in-out;
+  transform: translateX(0);
+}
+#containerMainPage .secondaSezione .containerNews .containerDestra div.oldSchool.oldSchool, #containerMainPage .secondaSezione .containerNews .containerDestra div.stageLegend.oldSchool {
+  margin-bottom: 25px;
+}
+#containerMainPage .secondaSezione .containerNews .containerDestra div.oldSchool img, #containerMainPage .secondaSezione .containerNews .containerDestra div.stageLegend img {
+  width: 100%;
+  height: 105%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+#containerMainPage .secondaSezione .containerNews h3 {
+  padding-top: 35px;
+  padding-left: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+#containerMainPage .secondaSezione .containerNews p {
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-bottom: 35px;
+  font-family: "Merriweather", serif;
+}
+
+#containerMainPage .terzaSezione, #containerMainPage .sestaSezione {
+  background-color: #805876;
+  color: white;
+  text-align: center;
+  padding: 75px 0px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#containerMainPage .terzaSezione:hover, #containerMainPage .sestaSezione:hover {
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+#containerMainPage .terzaSezione:hover a, #containerMainPage .sestaSezione:hover a {
+  color: black;
+}
+#containerMainPage .terzaSezione h4, #containerMainPage .sestaSezione h4 {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "PT Sans", sans-serif;
+}
+#containerMainPage .terzaSezione h4 a, #containerMainPage .sestaSezione h4 a {
+  color: white;
+  text-decoration: none;
+}
+
+#containerMainPage .quartaSezione {
+  height: 90vh;
+  background-image: url("../img/mainPage/home-testimonial-parallax.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+#containerMainPage .quartaSezione div {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#containerMainPage .quartaSezione div p {
+  color: white;
+  font-size: 30px;
+  line-height: 55px;
+  text-align: center;
+  font-style: italic;
+  font-family: "Merriweather", serif;
+}
+#containerMainPage .quartaSezione div img {
+  padding-top: 30px;
+  cursor: pointer;
+}
+
+#containerMainPage .quintaSezione {
+  background-color: #252B33;
+  padding-bottom: 150px;
+}
+
+#containerLiveDates header {
+  height: 100vh;
+  background-image: url("../img/liveDates/live_date_slide.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+#containerLiveDates header .headerTop {
+  height: 100px;
+  display: flex;
+  padding: 20px 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(37, 43, 51, 0.7);
+}
+#containerLiveDates header .headerTop img, #containerLiveDates header .headerTop i {
+  cursor: pointer;
+}
+#containerLiveDates header .menu {
+  height: 100vh;
+  width: 100%;
+  background-color: #805876;
+  position: fixed;
+  z-index: 10;
+}
+#containerLiveDates header .menu .headerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 50px;
+}
+#containerLiveDates header .menu .headerMenu i {
+  cursor: pointer;
+  color: #aeaeaf;
+}
+#containerLiveDates header .menu .headerMenu i:hover {
+  color: white;
+}
+#containerLiveDates header .menu ul li {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  padding: 35px 0px;
+}
+#containerLiveDates header .menu ul li a {
+  color: #aeaeaf;
+  font-family: "Montserrat", sans-serif;
+}
+#containerLiveDates header .menu ul li a:hover {
+  color: white;
+}
+#containerLiveDates header .headerCenter {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#containerLiveDates header .headerCenter h1 {
+  font-size: 150px;
+  letter-spacing: 5px;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+}
+#containerLiveDates header .headerCenter h4 {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  padding: 50px 0px 50px 0px;
+  font-family: "Merriweather", serif;
+}
+
+#containerLiveDates .primaSezione {
+  background-color: #323944;
+}
+#containerLiveDates .primaSezione .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 75px 0px;
+}
+#containerLiveDates .primaSezione .container img {
+  width: 48%;
+}
+#containerLiveDates .primaSezione .container .containerDescrizione {
+  width: 48%;
+}
+#containerLiveDates .primaSezione .container .containerDescrizione h2 {
+  text-align: center;
+}
+#containerLiveDates .primaSezione .container .containerDescrizione hr {
+  width: 50%;
+  margin-left: 0;
+}
+#containerLiveDates .primaSezione .container .containerDescrizione p {
+  margin-top: 35px;
+}
+#containerLiveDates .primaSezione .container .containerDescrizione p.descrizione {
+  line-height: 25px;
+  text-align: justify;
+}
+#containerLiveDates .primaSezione .container .containerDescrizione p i {
+  color: white;
+  margin-right: 15px;
+}
+#containerLiveDates .primaSezione .container .containerDescrizione p i.secondStar {
+  margin-left: 30px;
+}
+
+#containerLiveDates .secondaSezione {
+  background-color: #252B33;
+  padding: 150px 0px;
+}
+
+#containerLiveDates .terzaSezione {
+  height: 60vh;
+  background-image: url("../img/liveDates/live_date_parallax_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+#containerLiveDates .terzaSezione div {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#containerLiveDates .terzaSezione div p {
+  color: white;
+  font-size: 30px;
+  line-height: 55px;
+  text-align: center;
+  font-style: italic;
+  font-family: "Merriweather", serif;
+}
+#containerLiveDates .terzaSezione div span {
+  padding-top: 30px;
+}
+#containerLiveDates .terzaSezione div span i {
+  color: white;
+}
+
+#containerLiveDates .quartaSezione {
+  background-color: #805876;
+  color: white;
+  text-align: center;
+  padding: 75px 0px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#containerLiveDates .quartaSezione:hover {
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+#containerLiveDates .quartaSezione:hover a {
+  color: black;
+}
+#containerLiveDates .quartaSezione h4 {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "PT Sans", sans-serif;
+}
+#containerLiveDates .quartaSezione h4 a {
+  color: white;
+  text-decoration: none;
+}
+
+#containerMeetTheBand header {
+  height: 100vh;
+  background-image: url("../img/meetTheBand/about-slider.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+#containerMeetTheBand header .headerTop {
+  height: 100px;
+  display: flex;
+  padding: 20px 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(37, 43, 51, 0.7);
+}
+#containerMeetTheBand header .headerTop img, #containerMeetTheBand header .headerTop i {
+  cursor: pointer;
+}
+#containerMeetTheBand header .menu {
+  height: 100vh;
+  width: 100%;
+  background-color: #805876;
+  position: fixed;
+  z-index: 10;
+}
+#containerMeetTheBand header .menu .headerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 50px;
+}
+#containerMeetTheBand header .menu .headerMenu i {
+  cursor: pointer;
+  color: #aeaeaf;
+}
+#containerMeetTheBand header .menu .headerMenu i:hover {
+  color: white;
+}
+#containerMeetTheBand header .menu ul li {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  padding: 35px 0px;
+}
+#containerMeetTheBand header .menu ul li a {
+  color: #aeaeaf;
+  font-family: "Montserrat", sans-serif;
+}
+#containerMeetTheBand header .menu ul li a:hover {
+  color: white;
+}
+#containerMeetTheBand header .headerCenter {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#containerMeetTheBand header .headerCenter h1 {
+  font-size: 150px;
+  letter-spacing: 5px;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+}
+#containerMeetTheBand header .headerCenter h4 {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  padding: 50px 0px 50px 0px;
+  font-family: "Merriweather", serif;
+}
+
+#containerMeetTheBand .primaSezione {
+  background-color: #323944;
+}
+#containerMeetTheBand .primaSezione .containerProfili {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+#containerMeetTheBand .primaSezione .containerProfili .profilo {
+  width: 23%;
+  text-align: center;
+}
+#containerMeetTheBand .primaSezione .containerProfili .profilo div {
+  width: 100%;
+  overflow: hidden;
+}
+#containerMeetTheBand .primaSezione .containerProfili .profilo div img {
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+#containerMeetTheBand .primaSezione .containerProfili .profilo div img:hover {
+  transition: 1s;
+  transform: scale(1.1);
+}
+#containerMeetTheBand .primaSezione .containerProfili .profilo h3 {
+  color: white;
+  font-weight: 400;
+  padding: 25px 0px;
+}
+#containerMeetTheBand .primaSezione .containerProfili .profilo ul li {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 5px;
+  background-color: #805876;
+  border-radius: 3px;
+}
+#containerMeetTheBand .primaSezione .containerProfili .profilo ul li a {
+  color: #323944;
+}
+#containerMeetTheBand .primaSezione .containerProfili .profilo ul li a:hover {
+  color: white;
+}
+#containerMeetTheBand .primaSezione .containerProfili .profilo p {
+  line-height: 30px;
+  padding-top: 30px;
+}
+
+#containerMeetTheBand .secondaSezione {
+  background-color: #252B33;
+  display: flex;
+}
+#containerMeetTheBand .secondaSezione .descrizione {
+  width: 60%;
+  padding: 50px 50px 100px 50px;
+}
+#containerMeetTheBand .secondaSezione .descrizione hr {
+  width: 50%;
+  margin-left: 0;
+}
+#containerMeetTheBand .secondaSezione .descrizione p {
+  line-height: 30px;
+  margin: 20px 0px;
+}
+#containerMeetTheBand .secondaSezione .frase {
+  width: 40%;
+  background-image: url("../img/meetTheBand/about-quote.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#containerMeetTheBand .secondaSezione .frase p {
+  font-style: italic;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  width: 85%;
+  line-height: 35px;
+  margin-bottom: 30px;
+}
+#containerMeetTheBand .secondaSezione .frase span {
+  color: white;
+}
+
+#containerMeetTheBand .terzaSezione {
+  height: 80vh;
+  background-image: url("../img/meetTheBand/about_video_parallax.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#containerMeetTheBand .quartaSezione {
+  background-color: #323944;
+}
+#containerMeetTheBand .quartaSezione .containerFoto {
+  margin-top: 50px;
+  display: flex;
+}
+#containerMeetTheBand .quartaSezione .containerFoto div {
+  width: 25%;
+  overflow: hidden;
+}
+#containerMeetTheBand .quartaSezione .containerFoto img {
+  width: 100%;
+  transition: 1s;
+}
+#containerMeetTheBand .quartaSezione .containerFoto img:hover {
+  transition: 1;
+  transform: scale(1.1);
+}
+
+#containerLatesNews header {
+  height: 100vh;
+  background-image: url("../img/latestNews/latest_news_slider_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+#containerLatesNews header .headerTop {
+  height: 100px;
+  display: flex;
+  padding: 20px 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(37, 43, 51, 0.7);
+}
+#containerLatesNews header .headerTop img, #containerLatesNews header .headerTop i {
+  cursor: pointer;
+}
+#containerLatesNews header .menu {
+  height: 100vh;
+  width: 100%;
+  background-color: #805876;
+  position: fixed;
+  z-index: 10;
+}
+#containerLatesNews header .menu .headerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 50px;
+}
+#containerLatesNews header .menu .headerMenu i {
+  cursor: pointer;
+  color: #aeaeaf;
+}
+#containerLatesNews header .menu .headerMenu i:hover {
+  color: white;
+}
+#containerLatesNews header .menu ul li {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  padding: 35px 0px;
+}
+#containerLatesNews header .menu ul li a {
+  color: #aeaeaf;
+  font-family: "Montserrat", sans-serif;
+}
+#containerLatesNews header .menu ul li a:hover {
+  color: white;
+}
+#containerLatesNews header .headerCenter {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#containerLatesNews header .headerCenter h1 {
+  font-size: 150px;
+  letter-spacing: 5px;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+}
+#containerLatesNews header .headerCenter h4 {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  padding: 50px 0px 50px 0px;
+  font-family: "Merriweather", serif;
+}
+
+#containerLatesNews .primaSezione {
+  background-color: #252B33;
+  padding-bottom: 100px;
+}
+#containerLatesNews .primaSezione .containerNews {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0px auto 0px auto;
+}
+#containerLatesNews .primaSezione .containerNews .containerSinistra {
+  width: 66%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#containerLatesNews .primaSezione .containerNews .containerSinistra div {
+  background-color: #323944;
+  border: 1px solid #323944;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+#containerLatesNews .primaSezione .containerNews .containerSinistra div .container {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.5s ease-in-out;
+  transform: scaleY(1);
+  z-index: 1;
+}
+#containerLatesNews .primaSezione .containerNews .containerSinistra div:hover .container {
+  transform: translateY(100%);
+  transition: all 0.5s ease-in-out;
+}
+#containerLatesNews .primaSezione .containerNews .containerSinistra div.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(-100%);
+  background-color: rgba(236, 72, 87, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+#containerLatesNews .primaSezione .containerNews .containerSinistra div.overlay h3.overlayTitle {
+  padding: 0;
+  color: white;
+}
+#containerLatesNews .primaSezione .containerNews .containerSinistra div:hover .overlay {
+  transition: all 0.5s ease-in-out;
+  transform: translateX(0);
+}
+#containerLatesNews .primaSezione .containerNews .containerSinistra div.technologyMusic, #containerLatesNews .primaSezione .containerNews .containerSinistra div.rockFlavour {
+  width: 100%;
+}
+#containerLatesNews .primaSezione .containerNews .containerSinistra div.technologyMusic img, #containerLatesNews .primaSezione .containerNews .containerSinistra div.rockFlavour img {
+  width: 100%;
+  height: 100%;
+}
+#containerLatesNews .primaSezione .containerNews .containerSinistra div.guitarWeeps, #containerLatesNews .primaSezione .containerNews .containerSinistra div.soundsBetter {
+  width: 48%;
+  margin: 35px 0px;
+}
+#containerLatesNews .primaSezione .containerNews .containerSinistra div.guitarWeeps img, #containerLatesNews .primaSezione .containerNews .containerSinistra div.soundsBetter img {
+  width: 100%;
+  height: 100%;
+}
+#containerLatesNews .primaSezione .containerNews .containerDestra {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#containerLatesNews .primaSezione .containerNews .containerDestra div.oldSchool, #containerLatesNews .primaSezione .containerNews .containerDestra div.stageLegend {
+  border: 1px solid #323944;
+  padding-bottom: 25px;
+  cursor: pointer;
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+}
+#containerLatesNews .primaSezione .containerNews .containerDestra div.oldSchool .container, #containerLatesNews .primaSezione .containerNews .containerDestra div.stageLegend .container {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #323944;
+  transition: all 0.5s ease-in-out;
+  transform: scaleY(1);
+  z-index: 1;
+}
+#containerLatesNews .primaSezione .containerNews .containerDestra div.oldSchool:hover .container, #containerLatesNews .primaSezione .containerNews .containerDestra div.stageLegend:hover .container {
+  transform: translateY(100%);
+  transition: all 0.5s ease-in-out;
+}
+#containerLatesNews .primaSezione .containerNews .containerDestra div.oldSchool .overlay, #containerLatesNews .primaSezione .containerNews .containerDestra div.stageLegend .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(-100%);
+  background-color: rgba(236, 72, 87, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+#containerLatesNews .primaSezione .containerNews .containerDestra div.oldSchool .overlay h3.overlayTitle, #containerLatesNews .primaSezione .containerNews .containerDestra div.stageLegend .overlay h3.overlayTitle {
+  padding: 0;
+  color: white;
+}
+#containerLatesNews .primaSezione .containerNews .containerDestra div.oldSchool:hover .overlay, #containerLatesNews .primaSezione .containerNews .containerDestra div.stageLegend:hover .overlay {
+  transition: all 0.5s ease-in-out;
+  transform: translateX(0);
+}
+#containerLatesNews .primaSezione .containerNews .containerDestra div.oldSchool.oldSchool, #containerLatesNews .primaSezione .containerNews .containerDestra div.stageLegend.oldSchool {
+  margin-bottom: 25px;
+}
+#containerLatesNews .primaSezione .containerNews .containerDestra div.oldSchool img, #containerLatesNews .primaSezione .containerNews .containerDestra div.stageLegend img {
+  width: 100%;
+  height: 105%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+#containerLatesNews .primaSezione .containerNews h3 {
+  padding-top: 35px;
+  padding-left: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+#containerLatesNews .primaSezione .containerNews p {
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-bottom: 35px;
+  font-family: "Merriweather", serif;
+}
+
+#containerLatesNews .secondaSezione {
+  height: 60vh;
+  background-image: url("../img/latestNews/latest-news-parallax.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+}
+#containerLatesNews .secondaSezione div {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#containerLatesNews .secondaSezione div p {
+  color: white;
+  font-size: 30px;
+  line-height: 55px;
+  text-align: center;
+  font-style: italic;
+  font-family: "Merriweather", serif;
+}
+#containerLatesNews .secondaSezione div span {
+  padding-top: 30px;
+}
+#containerLatesNews .secondaSezione div span i {
+  color: white;
+}
+
+#containerLatesNews .terzaSezione {
+  background-color: #252B33;
+  padding-bottom: 150px;
+}
+#containerLatesNews .terzaSezione .containerArticoli {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+#containerLatesNews .terzaSezione .containerArticoli h3 {
+  padding: 10px 0px;
+}
+#containerLatesNews .terzaSezione .containerArticoli p {
+  line-height: 25px;
+}
+#containerLatesNews .terzaSezione .containerArticoli > div {
+  width: 48%;
+}
+#containerLatesNews .terzaSezione .containerArticoli > div.sinistra div {
+  width: 100%;
+  overflow: hidden;
+}
+#containerLatesNews .terzaSezione .containerArticoli > div.sinistra div img {
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 1s;
+}
+#containerLatesNews .terzaSezione .containerArticoli > div.sinistra div img:hover {
+  transition: 1s;
+  transform: scale(1.1);
+}
+#containerLatesNews .terzaSezione .containerArticoli > div.destra .containerFotoDescrizione {
+  display: flex;
+  margin-bottom: 25px;
+}
+#containerLatesNews .terzaSezione .containerArticoli > div.destra .containerFotoDescrizione .containerFoto {
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+}
+#containerLatesNews .terzaSezione .containerArticoli > div.destra .containerFotoDescrizione .containerFoto img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 1s;
+}
+#containerLatesNews .terzaSezione .containerArticoli > div.destra .containerFotoDescrizione .containerFoto img:hover {
+  transition: 1s;
+  transform: scale(1.1);
+}
+#containerLatesNews .terzaSezione .containerArticoli > div.destra .containerFotoDescrizione .descrizione {
+  width: calc(100% - 150px);
+  margin-left: 10px;
+}
+
+#containerLatesNews .quartaSezione {
+  background-color: #805876;
+  color: white;
+  text-align: center;
+  padding: 75px 0px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#containerLatesNews .quartaSezione:hover {
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+#containerLatesNews .quartaSezione:hover a {
+  color: black;
+}
+#containerLatesNews .quartaSezione h4 {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "PT Sans", sans-serif;
+}
+#containerLatesNews .quartaSezione h4 a {
+  color: white;
+  text-decoration: none;
+}
+
+#containerAlbums header {
+  height: 100vh;
+  background-image: url("../img/albums/page-title-bar-bkgd.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+#containerAlbums header .headerTop {
+  height: 100px;
+  display: flex;
+  padding: 20px 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(37, 43, 51, 0.7);
+}
+#containerAlbums header .headerTop img, #containerAlbums header .headerTop i {
+  cursor: pointer;
+}
+#containerAlbums header .menu {
+  height: 100vh;
+  width: 100%;
+  background-color: #805876;
+  position: fixed;
+  z-index: 10;
+}
+#containerAlbums header .menu .headerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 50px;
+}
+#containerAlbums header .menu .headerMenu i {
+  cursor: pointer;
+  color: #aeaeaf;
+}
+#containerAlbums header .menu .headerMenu i:hover {
+  color: white;
+}
+#containerAlbums header .menu ul li {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  padding: 35px 0px;
+}
+#containerAlbums header .menu ul li a {
+  color: #aeaeaf;
+  font-family: "Montserrat", sans-serif;
+}
+#containerAlbums header .menu ul li a:hover {
+  color: white;
+}
+#containerAlbums header .headerCenter {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#containerAlbums header .headerCenter h1 {
+  font-size: 150px;
+  letter-spacing: 5px;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+}
+#containerAlbums header .headerCenter h4 {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  padding: 50px 0px 50px 0px;
+  font-family: "Merriweather", serif;
+}
+
+#containerAlbums .primaSezione {
+  background-color: #323944;
+}
+#containerAlbums .primaSezione .containerFoto {
+  margin-top: 50px;
+  display: flex;
+}
+#containerAlbums .primaSezione .containerFoto div {
+  width: 25%;
+  overflow: hidden;
+}
+#containerAlbums .primaSezione .containerFoto div img {
+  width: 100%;
+  transition: 1s;
+  display: block;
+}
+#containerAlbums .primaSezione .containerFoto div img:hover {
+  transition: 1s;
+  transform: scale(1.1);
+}
+
+#containerAlbums .secondaSezione .containerAlbum {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60vh;
+}
+#containerAlbums .secondaSezione .containerAlbum.bgGrigioChiaro {
+  background-color: #323944;
+}
+#containerAlbums .secondaSezione .containerAlbum.bgGrigioScuro {
+  background-color: #252B33;
+}
+#containerAlbums .secondaSezione .containerAlbum .container {
+  width: 40%;
+}
+#containerAlbums .secondaSezione .containerAlbum .container h2 {
+  font-size: 30px;
+  padding-top: 0;
+}
+#containerAlbums .secondaSezione .containerAlbum .container h3 {
+  font-style: italic;
+}
+#containerAlbums .secondaSezione .containerAlbum .container p {
+  line-height: 30px;
+  padding: 20px 0px;
+}
+#containerAlbums .secondaSezione .containerAlbum .container button {
+  border-radius: 3px;
+}
+#containerAlbums .secondaSezione .containerAlbum iframe {
+  width: 45%;
+  height: 35%;
+}
+
+#containerAlbums .terzaSezione {
+  background-color: #805876;
+  color: white;
+  text-align: center;
+  padding: 75px 0px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#containerAlbums .terzaSezione:hover {
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+#containerAlbums .terzaSezione:hover a {
+  color: black;
+}
+#containerAlbums .terzaSezione h4 {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "PT Sans", sans-serif;
+}
+#containerAlbums .terzaSezione h4 a {
+  color: white;
+  text-decoration: none;
+}
+
+#containerAlbums .quartaSezione {
+  background-color: #252B33;
+  display: flex;
+}
+#containerAlbums .quartaSezione .descrizione {
+  width: 60%;
+  padding: 50px 50px 100px 50px;
+}
+#containerAlbums .quartaSezione .descrizione hr {
+  width: 50%;
+  margin-left: 0;
+}
+#containerAlbums .quartaSezione .descrizione p {
+  line-height: 30px;
+  margin: 20px 0px;
+}
+#containerAlbums .quartaSezione .frase {
+  width: 40%;
+  background-image: url("../img/albums/about-quote.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#containerAlbums .quartaSezione .frase p {
+  font-style: italic;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  width: 85%;
+  line-height: 35px;
+  margin-bottom: 30px;
+}
+#containerAlbums .quartaSezione .frase span {
+  color: white;
+}
+
+#containerFans header {
+  height: 100vh;
+  background-image: url("../img/fans/product_slider.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+#containerFans header .headerTop {
+  height: 100px;
+  display: flex;
+  padding: 20px 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(37, 43, 51, 0.7);
+}
+#containerFans header .headerTop img, #containerFans header .headerTop i {
+  cursor: pointer;
+}
+#containerFans header .menu {
+  height: 100vh;
+  width: 100%;
+  background-color: #805876;
+  position: fixed;
+  z-index: 10;
+}
+#containerFans header .menu .headerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 50px;
+}
+#containerFans header .menu .headerMenu i {
+  cursor: pointer;
+  color: #aeaeaf;
+}
+#containerFans header .menu .headerMenu i:hover {
+  color: white;
+}
+#containerFans header .menu ul li {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  padding: 35px 0px;
+}
+#containerFans header .menu ul li a {
+  color: #aeaeaf;
+  font-family: "Montserrat", sans-serif;
+}
+#containerFans header .menu ul li a:hover {
+  color: white;
+}
+#containerFans header .headerCenter {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#containerFans header .headerCenter h1 {
+  font-size: 150px;
+  letter-spacing: 5px;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+}
+#containerFans header .headerCenter h4 {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  padding: 50px 0px 50px 0px;
+  font-family: "Merriweather", serif;
+}
+
+#containerFans .primaSezione {
+  background-color: #323944;
+  padding-bottom: 100px;
+}
+#containerFans .primaSezione ul li {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 5px;
+  background-color: #805876;
+}
+#containerFans .primaSezione ul li a {
+  color: #323944;
+}
+
+#containerFans .secondaSezione {
+  background-color: #252B33;
+}
+#containerFans .secondaSezione form {
+  width: 60%;
+  margin: auto;
+  padding: 75px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#containerFans .secondaSezione form div {
+  margin-bottom: 30px;
+}
+#containerFans .secondaSezione form div.inputName, #containerFans .secondaSezione form div.inputEmail {
+  width: 50%;
+}
+#containerFans .secondaSezione form div.inputSubject, #containerFans .secondaSezione form div.inputMessage {
+  width: 100%;
+}
+#containerFans .secondaSezione form label {
+  color: #7D7C8D;
+}
+#containerFans .secondaSezione form input, #containerFans .secondaSezione form textarea {
+  background-color: #323944;
+  border: none;
+}
+#containerFans .secondaSezione form #name, #containerFans .secondaSezione form #email {
+  height: 40px;
+  width: 95%;
+}
+#containerFans .secondaSezione form #subject {
+  height: 40px;
+  width: 100%;
+}
+#containerFans .secondaSezione form #message {
+  height: 100px;
+  width: 100%;
+}
+#containerFans .secondaSezione form button {
+  border-radius: 3px;
+}
+
+#containerFans .terzaSezione .containerFoto {
+  display: flex;
+}
+#containerFans .terzaSezione .containerFoto div {
+  width: 25%;
+  overflow: hidden;
+}
+#containerFans .terzaSezione .containerFoto div img {
+  width: 100%;
+  transition: 1s;
+  display: block;
+}
+#containerFans .terzaSezione .containerFoto div img:hover {
+  transition: 1s;
+  transform: scale(1.1);
+}
+
+#containerFans .quartaSezione {
+  background-color: #805876;
+  color: white;
+  text-align: center;
+  padding: 75px 0px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#containerFans .quartaSezione:hover {
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+#containerFans .quartaSezione:hover a {
+  color: black;
+}
+#containerFans .quartaSezione h4 {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "PT Sans", sans-serif;
+}
+#containerFans .quartaSezione h4 a {
+  color: white;
+  text-decoration: none;
+}
