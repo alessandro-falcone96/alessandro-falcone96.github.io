@@ -201,7 +201,7 @@ footer div:last-child:hover {
   background-color: #805876;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1025px) {
   .contenuto {
     width: 90%;
   }
@@ -1631,7 +1631,7 @@ footer div:last-child:hover {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1025px) {
   #containerMainPage header .headerTop {
     height: 200px;
   }
