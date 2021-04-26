@@ -8,23 +8,24 @@ h1{
   width: 100%;
   line-height: 50vh;
   text-align: center;
-  border: 1px solid orange;
-  background-color: lightyellow;
+  border: 1px solid red;
+  background-color: lightblue;
   color: red;
 }
 
 @media only screen and (max-width: 1075px) {
   h1{
-    border: 1px solid blue;
-    background-color: lightblue;
-    color: darkblue;
+
+    border: 1px solid orange;
+    background-color: yellow;
+    color: red;
   }
 }
 
 @media only screen and (max-width: 950px) {
   h1{
-    border: 1px solid orange;
-    background-color: yellow;
-    color: red;
+    border: 1px solid blue;
+    background-color: lightblue;
+    color: darkblue;
   }
 }
