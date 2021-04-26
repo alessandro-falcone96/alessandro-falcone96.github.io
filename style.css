@@ -13,24 +13,18 @@ h1{
   color: red;
 }
 
-@media only screen and (max-width: 1110px) {
+@media only screen and (max-width: 1050px) {
   h1{
-    /* border: 1px solid green;
+    border: 1px solid green;
     background-color: lightgreen;
-    color: darkgreen; */
-    border: 1px solid red;
-    background-color: orange;
-    color: darkred;
+    color: darkgreen;
   }
 }
 
-@media only screen and (max-width: 412px) {
+@media only screen and (max-width: 850px) {
   h1{
-    /* border: 1px solid blue;
+    border: 1px solid blue;
     background-color: lightblue;
-    color: darkblue; */
-    border: 1px solid red;
-    background-color: pink;
-    color: blue;
+    color: darkblue;
   }
 }
