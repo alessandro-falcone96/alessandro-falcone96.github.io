@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1{
+  height: 50vh;
+  width: 100%;
+  line-height: 50vh;
+  text-align: center;
+  border: 1px solid orange;
+  background-color: lightyellow;
+  color: red;
+}
+
+@media only screen and (max-width: 1112px) {
+  h1{
+    border: 1px solid green;
+    background-color: lightgreen;
+    color: darkgreen;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  h1{
+    border: 1px solid blue;
+    background-color: lightblue;
+    color: darkblue;
+  }
+}
