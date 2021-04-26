@@ -1,16 +1,24 @@
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 992px) {
 
   // Header
   #containerMainPage header{
 
       & .headerTop{
-        height: 200px;
+        height: 300px;
+
+        & img{
+          height: 150px;
+        }
       }
 
       & .menu{
 
         & .headerMenu{
-          height: 200px;
+          height: 300px;
+
+          & img{
+            height: 150px;
+          }
         }
 
         & ul li{
@@ -26,8 +34,8 @@
         }
 
         & h4{
-          font-size: $fontMedio;
-          width: 90%;
+          font-size: $fontMedioMedioGrande;
+          width: 80%;
           margin: auto;
         }
       }
@@ -35,7 +43,6 @@
 
   // Main
   #containerMainPage .secondaSezione{
-    // background-color: yellow;
 
     & .containerNews{
       width: 90%;
@@ -43,6 +50,7 @@
 
       & .containerSinistra{
         width: 100%;
+        margin-bottom: 50px;
 
         & div{
 
@@ -52,6 +60,11 @@
 
           & p{
             font-size: $fontMedio;
+          }
+
+          &.technologyMusic, &.rockFlavour{
+            height: 700px;
+            object-fit: contain;
           }
 
           &.guitarWeeps, &.soundsBetter {
@@ -79,6 +92,8 @@
   }
 
   #containerMainPage .terzaSezione, #containerMainPage .sestaSezione{
+    padding: 150px 0px;
+
     & h4{
       font-size: $fontMedio;
     }
@@ -91,7 +106,7 @@
       width: 90%;
 
       & p{
-        font-size: $fontMedioGrande;
+        font-size: $fontMedioMedioGrande;
         line-height: 80px;
       }
     }
