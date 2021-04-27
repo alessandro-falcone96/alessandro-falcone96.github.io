@@ -62,8 +62,8 @@ h3{
 
 /* Landscape */
 @media screen
-  and (device-width: 412px)
-  and (device-height: 846px)
+  and (device-width: 846px)
+  and (device-height: 412px)
   and (orientation: landscape) {
     .galaxy, .landscape{
       display: block;
