@@ -12,30 +12,60 @@ h1{
   background-color: pink;
   color: yellow;
 }
-
-@media only screen and (max-width: 950px) {
-  h1{
-
-    border: 1px solid blue;
-    background-color: lightblue;
-    color: darkblue;
-  }
+h3{
+  display: none;
+  text-align: center;
+  padding: 30px 0px;
+  color: blue;
 }
 
-@media only screen and (max-width: 925px) {
-  h1{
 
-    border: 1px solid orange;
-    background-color: yellow;
-    color: red;
+/* Ipad Pro */
+/* @media only screen and (max-width: 1112px) {
+  .iPad{
+    display: block;
   }
+  .iPhone{
+    display: none;
+  }
+} */
+
+/* Galaxy S9+, Iphone */
+/* @media only screen and (max-width: 985px) {
+  .iPhone{
+    display: block;
+  }
+  .iPad{
+    display: none;
+  }
+} */
+
+/* Galaxy S9+ */
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 412px)
+  and (device-height: 846px) {
+    .galaxy{
+      display: block;
+    }
 }
 
-@media only screen and (max-width: 900px) {
-  h1{
+/* Portrait */
+@media screen
+  and (device-width: 412px)
+  and (device-height: 846px)
+  and (orientation: portrait) {
+    .galaxy, .portrait{
+      display: block;
+    }
+}
 
-    border: 1px solid black;
-    background-color: red;
-    color: green;
-  }
+/* Landscape */
+@media screen
+  and (device-width: 412px)
+  and (device-height: 846px)
+  and (orientation: landscape) {
+    .galaxy, .landscape{
+      display: block;
+    }
 }
