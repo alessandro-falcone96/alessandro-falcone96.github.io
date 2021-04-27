@@ -57,6 +57,7 @@ h3{
   and (orientation: portrait) {
     .galaxy, .portrait{
       display: block;
+      background-color: green;
     }
 }
 
@@ -64,8 +65,9 @@ h3{
 @media screen
   and (device-width: 846px)
   and (device-height: 412px)
-  and (orientation: landscape) {
+  and (orientation: portrait) {
     .galaxy, .landscape{
       display: block;
+      background-color: red;
     }
 }
